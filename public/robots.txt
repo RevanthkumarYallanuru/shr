@@ -1,0 +1,27 @@
+# Sri Hari Home Stay - Robots.txt
+# https://sri-hari-home-stay.netlify.app
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+Crawl-delay: 2
+
+# Sitemap location
+Sitemap: https://sri-hari-home-stay.netlify.app/sitemap.xml
+
+# Disallow admin and API paths (if any)
+Disallow: /api/
+Disallow: /admin/

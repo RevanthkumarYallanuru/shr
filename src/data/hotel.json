@@ -1,0 +1,800 @@
+{
+    "id": "sri-hari-home-stay",
+    "name": "Sri Hari Home Stay",
+    "type": "Home Stay",
+    "tagline": "Best 2BHK stays in Tirupati",
+    "description": "Experience comfort and hospitality at Sri Hari Home Stay in Tirupati. Discover clean, spacious rooms perfect for families and pilgrims visiting Lord Venkateswara Temple.",
+    
+    "rating": {
+        "score": 5.0,
+        "count": 42,
+        "platform": "Google Reviews"
+    },
+    
+    "address": {
+        "line1": "22-4-52/104",
+        "area": "Bank Employees Colony, Sri Venkateshwara Colony",
+        "locality": "Mangalam",
+        "city": "Tirupati",
+        "state": "Andhra Pradesh",
+        "pincode": "517507",
+        "country": "India",
+        "full": "22-4-52/104, Bank Employees Colony, Sri Venkateshwara Colony, Mangalam, Tirupati, Andhra Pradesh 517507"
+    },
+    
+    "contact": {
+        "phone": "917207357312",
+        "email": "contact@sriharihomestay.com",
+        "website": "https://sri-hari-home-stay.netlify.app",
+        "whatsapp": "917207357312"
+    },
+    
+    "location": {
+        "latitude": null,
+        "longitude": null,
+        "description": "Prime Location near Lord Venkateswara Temple"
+    },
+    
+    "social_links": {
+        "google_maps": true,
+        "facebook": null,
+        "instagram": null
+    },
+    
+    "meta": {
+        "title": "Sri Hari Home Stay | Family Home Stay in Tirupati",
+        "keywords": "Tirupati homestay, family accommodation Tirupati, Sri Hari Home Stay, Tirumala lodging, pilgrim stay Tirupati",
+        "description": "Book your stay at Sri Hari Home Stay - a top-rated family home stay in Tirupati. Clean rooms, excellent service, and a secure environment for pilgrims and families."
+    },
+    
+    "theme": {
+        "primaryColor": "#D32F2F",
+        "accentColor": "#1E88E5",
+        "backgroundColor": "#F1E9D4"
+    },
+
+    "pages": {
+        "home": {
+            "hero": {
+                "tagline": "Best 2BHK stays in Tirupati",
+                "title": "Sri Hari Home Stay",
+                "subtitle": "Your Home Away From Home",
+                "description": "Experience comfort and hospitality at our premium 2BHK home stay in Tirupati. Perfect for families and pilgrims visiting Lord Venkateswara Temple.",
+                "image": "hro-banner.png",
+                "cta": [
+                    {
+                        "text": "Book Your Stay",
+                        "link": "/booking",
+                        "style": "primary"
+                    },
+                    {
+                        "text": "Explore Rooms",
+                        "link": "/rooms",
+                        "style": "secondary"
+                    }
+                ]
+            },
+            
+            "about": {
+                "tagline": "About Sri Hari Home Stay",
+                "title": "Exceptional Home Stay in Tirupati",
+                "description": "Experience comfort and hospitality at Sri Hari Home Stay in Tirupati. Discover clean, spacious rooms perfect for families and pilgrims visiting Lord Venkateswara Temple.",
+                "images": ["room-suite.jpg", "room-deluxe.jpg"],
+                "stats": [
+                    {
+                        "icon": "Star",
+                        "label": "Rating",
+                        "value": "5.0",
+                        "subtext": "42 Reviews"
+                    },
+                    {
+                        "icon": "MapPin",
+                        "label": "Prime Location",
+                        "value": "Mangalam",
+                        "subtext": "Tirupati, Andhra Pradesh"
+                    }
+                ],
+                "testimonial": "Room facilities are good, Room cleaning is excellent, and Staff service is very good"
+            },
+            
+            "features": {
+                "tagline": "Our Amenities",
+                "title": "Why Choose Sri Hari Home Stay",
+                "items": [
+                    {
+                        "id": "clean-rooms",
+                        "icon": "CheckCircle2",
+                        "name": "Clean and Spacious Rooms",
+                        "description": "Well-maintained, hygienic rooms with ample space for families"
+                    },
+                    {
+                        "id": "room-service",
+                        "icon": "Bell",
+                        "name": "Excellent Room Service",
+                        "description": "Prompt and courteous room service available 24/7"
+                    },
+                    {
+                        "id": "family-friendly",
+                        "icon": "Shield",
+                        "name": "Secure & Family-Friendly",
+                        "description": "Safe environment perfect for families and pilgrims"
+                    }
+                ]
+            },
+            
+            "roomsPreview": {
+                "tagline": "The Art of Stay",
+                "title": "Explore Comfort at Our Stays",
+                "rooms": [
+                    {
+                        "id": "room-1",
+                        "name": "Royal Tirumala Suite",
+                        "type": "Suite",
+                        "image": "room-suite.jpg"
+                    },
+                    {
+                        "id": "room-2",
+                        "name": "Deluxe Garden View",
+                        "type": "Deluxe",
+                        "image": "room-deluxe.jpg"
+                    },
+                    {
+                        "id": "room-3",
+                        "name": "Family Grand Suite",
+                        "type": "Family",
+                        "image": "room-family.jpg"
+                    }
+                ],
+                "cta": [
+                    {
+                        "text": "View All Rooms",
+                        "link": "/rooms",
+                        "style": "secondary",
+                        "icon": "ChevronRight"
+                    },
+                    {
+                        "text": "Book Now",
+                        "link": "/booking",
+                        "style": "primary",
+                        "icon": "ArrowRight"
+                    }
+                ]
+            },
+            
+            "testimonials": {
+                "tagline": "Guest Experience",
+                "title": "What Our Guests Say",
+                "rating": "5.0",
+                "count": 42,
+                "testimonials": [
+                    "Room facilities are good",
+                    "Room cleaning is excellent",
+                    "Staff service is very good",
+                    "Safe and secure stay for families"
+                ]
+            },
+            
+            "cta": {
+                "tagline": "Begin Your Journey",
+                "title": "Ready to experience serenity?",
+                "description": "Book your stay at Sri Hari Home Stay today. A sanctuary of peace awaits you in the heart of the spiritual capital.",
+                "buttons": [
+                    {
+                        "text": "Book Your Stay",
+                        "link": "/booking",
+                        "style": "primary"
+                    },
+                    {
+                        "text": "Contact Host",
+                        "link": "/contact",
+                        "style": "secondary"
+                    }
+                ]
+            }
+        },
+
+        "rooms": {
+            "hero": {
+                "tagline": "Our Collection",
+                "title": "Premium 2BHK Apartments",
+                "description": "Discover our fully-furnished 2-bedroom apartments with modern amenities and premium comfort",
+                "image": "hero-bedroom.jpg"
+            },
+            
+            "browseByArea": {
+                "title": "Browse by Area",
+                "description": "Explore different areas of our property",
+                "categories": [
+                    { "id": "all", "label": "All Areas" },
+                    { "id": "bedroom", "label": "Bedroom" },
+                    { "id": "hall", "label": "Hall" },
+                    { "id": "bathroom", "label": "Bathroom" },
+                    { "id": "balcony", "label": "Balcony" },
+                    { "id": "kitchen", "label": "Kitchen" }
+                ],
+                "areas": [
+                    {
+                        "id": 1,
+                        "src": "hero-bedroom.jpg",
+                        "title": "Master Bedroom",
+                        "category": "bedroom",
+                        "description": "Spacious and comfortable bedroom"
+                    },
+                    {
+                        "id": 2,
+                        "src": "room-suite.jpg",
+                        "title": "Living Hall",
+                        "category": "hall",
+                        "description": "Modern living area with balcony access"
+                    },
+                    {
+                        "id": 3,
+                        "src": "room-deluxe.jpg",
+                        "title": "Premium Bathroom",
+                        "category": "bathroom",
+                        "description": "Clean and modern bathroom facilities"
+                    },
+                    {
+                        "id": 4,
+                        "src": "room-family.jpg",
+                        "title": "Scenic Balcony",
+                        "category": "balcony",
+                        "description": "Balcony with mountain views"
+                    },
+                    {
+                        "id": 5,
+                        "src": "room-standard.jpg",
+                        "title": "Equipped Kitchen",
+                        "category": "kitchen",
+                        "description": "Fully equipped kitchen for your convenience"
+                    },
+                    {
+                        "id": 6,
+                        "src": "hero-bedroom.jpg",
+                        "title": "Second Bedroom",
+                        "category": "bedroom",
+                        "description": "Additional bedroom space"
+                    }
+                ]
+            },
+            
+            "roomDetails": [
+                {
+                    "id": "room-1",
+                    "name": "Royal Tirumala Suite",
+                    "type": "Suite",
+                    "price": 4500,
+                    "pricePerNight": true,
+                    "image": "room-suite.jpg",
+                    "gallery": ["room-suite.jpg", "hero-bedroom.jpg"],
+                    "description": "Experience luxury and comfort in our Royal Tirumala Suite, designed for families and groups.",
+                    "features": [
+                        "2 Spacious Bedrooms",
+                        "Living Area with Balcony",
+                        "Mountain View",
+                        "Modern Furnishings",
+                        "Equipped Kitchen",
+                        "Attached Bathrooms"
+                    ],
+                    "amenities": [
+                        "High-Speed WiFi",
+                        "Air Conditioning",
+                        "Balcony with Mountain View",
+                        "Free Parking",
+                        "24-Hour Check-in/Check-out",
+                        "Daily Housekeeping"
+                    ],
+                    "capacity": {
+                        "guests": 4,
+                        "bedrooms": 2,
+                        "bathrooms": 1
+                    },
+                    "checkIn": "24h",
+                    "checkOut": "24h",
+                    "rating": 4.9
+                },
+                {
+                    "id": "room-2",
+                    "name": "Deluxe Garden View",
+                    "type": "Deluxe",
+                    "price": 3200,
+                    "pricePerNight": true,
+                    "image": "room-deluxe.jpg",
+                    "gallery": ["room-deluxe.jpg", "hero-bedroom.jpg"],
+                    "description": "Our Deluxe room offers a perfect blend of comfort and affordability with garden views.",
+                    "features": [
+                        "2 Spacious Bedrooms",
+                        "Living Area",
+                        "Garden View",
+                        "Modern Furnishings",
+                        "Equipped Kitchen",
+                        "Attached Bathrooms"
+                    ],
+                    "amenities": [
+                        "High-Speed WiFi",
+                        "Air Conditioning",
+                        "Garden View",
+                        "Free Parking",
+                        "24-Hour Check-in/Check-out",
+                        "Daily Housekeeping"
+                    ],
+                    "capacity": {
+                        "guests": 4,
+                        "bedrooms": 2,
+                        "bathrooms": 1
+                    },
+                    "checkIn": "24h",
+                    "checkOut": "24h",
+                    "rating": 4.8
+                },
+                {
+                    "id": "room-3",
+                    "name": "Family Grand Suite",
+                    "type": "Family",
+                    "price": 5500,
+                    "pricePerNight": true,
+                    "image": "room-family.jpg",
+                    "gallery": ["room-family.jpg", "hero-bedroom.jpg"],
+                    "description": "Perfect for large families and groups. Our spacious Family Grand Suite provides maximum comfort.",
+                    "features": [
+                        "2 Spacious Bedrooms",
+                        "Large Living Area with Balcony",
+                        "Mountain View",
+                        "Premium Furnishings",
+                        "Fully Equipped Kitchen",
+                        "Attached Bathrooms with Luxe Fittings"
+                    ],
+                    "amenities": [
+                        "High-Speed WiFi",
+                        "Air Conditioning",
+                        "Balcony with Mountain View",
+                        "Free Parking (2 slots)",
+                        "24-Hour Check-in/Check-out",
+                        "Daily Housekeeping"
+                    ],
+                    "capacity": {
+                        "guests": 6,
+                        "bedrooms": 2,
+                        "bathrooms": 1
+                    },
+                    "checkIn": "24h",
+                    "checkOut": "24h",
+                    "rating": 4.9
+                }
+            ]
+        },
+
+        "gallery": {
+            "hero": {
+                "tagline": "Visual Journey",
+                "title": "Explore Our Beautiful Spaces",
+                "description": "Take a visual tour of Sri Hari Home Stay. Discover our elegantly designed rooms, serene ambiance, and the warm hospitality that awaits you in Tirupati."
+            },
+            
+            "categories": [
+                {
+                    "id": "all",
+                    "label": "All Photos"
+                },
+                {
+                    "id": "rooms",
+                    "label": "Rooms"
+                },
+                {
+                    "id": "interiors",
+                    "label": "Interiors"
+                },
+                {
+                    "id": "ambiance",
+                    "label": "Ambiance"
+                }
+            ],
+            
+            "images": [
+                {
+                    "id": 1,
+                    "src": "hero-bedroom.jpg",
+                    "title": "Luxurious Master Bedroom",
+                    "category": "rooms",
+                    "description": "Experience ultimate comfort in our beautifully designed bedrooms"
+                },
+                {
+                    "id": 2,
+                    "src": "room-suite.jpg",
+                    "title": "Premium Suite",
+                    "category": "rooms",
+                    "description": "Spacious suite with modern amenities and elegant décor"
+                },
+                {
+                    "id": 3,
+                    "src": "room-deluxe.jpg",
+                    "title": "Deluxe Room",
+                    "category": "rooms",
+                    "description": "Perfect blend of comfort and style for your relaxing stay"
+                },
+                {
+                    "id": 4,
+                    "src": "room-family.jpg",
+                    "title": "Family Suite",
+                    "category": "rooms",
+                    "description": "Ideal for families with ample space and cozy atmosphere"
+                },
+                {
+                    "id": 5,
+                    "src": "hero-bedroom.jpg",
+                    "title": "Elegant Interiors",
+                    "category": "interiors",
+                    "description": "Thoughtfully designed spaces with attention to every detail"
+                },
+                {
+                    "id": 6,
+                    "src": "room-suite.jpg",
+                    "title": "Living Area",
+                    "category": "interiors",
+                    "description": "Comfortable living spaces for relaxation"
+                },
+                {
+                    "id": 7,
+                    "src": "room-deluxe.jpg",
+                    "title": "Serene Ambiance",
+                    "category": "ambiance",
+                    "description": "Peaceful environment perfect for pilgrims and families"
+                }
+            ],
+            
+            "cta": {
+                "title": "Ready to Experience This Yourself?",
+                "description": "Book your stay at Sri Hari Home Stay and create beautiful memories in Tirupati.",
+                "buttons": [
+                    {
+                        "text": "Book Your Stay",
+                        "link": "/booking",
+                        "style": "primary"
+                    },
+                    {
+                        "text": "View Rooms",
+                        "link": "/rooms",
+                        "style": "secondary"
+                    }
+                ]
+            }
+        },
+
+        "booking": {
+            "hero": {
+                "tagline": "Secure Your Stay",
+                "title": "Book Your Perfect Getaway",
+                "description": "Reserve your room at Sri Hari Home Stay and enjoy a comfortable stay in Tirupati"
+            },
+            
+            "form": {
+                "title": "Booking Details",
+                "fields": [
+                    {
+                        "name": "name",
+                        "label": "Full Name",
+                        "type": "text",
+                        "required": true,
+                        "placeholder": "Enter your full name"
+                    },
+                    {
+                        "name": "email",
+                        "label": "Email Address",
+                        "type": "email",
+                        "required": true,
+                        "placeholder": "your.email@example.com"
+                    },
+                    {
+                        "name": "phone",
+                        "label": "Phone Number",
+                        "type": "tel",
+                        "required": true,
+                        "placeholder": "+91 9876543210"
+                    },
+                    {
+                        "name": "checkIn",
+                        "label": "Check-in Date",
+                        "type": "date",
+                        "required": true
+                    },
+                    {
+                        "name": "checkOut",
+                        "label": "Check-out Date",
+                        "type": "date",
+                        "required": true
+                    },
+                    {
+                        "name": "guests",
+                        "label": "Number of Guests",
+                        "type": "number",
+                        "required": true,
+                        "min": 1,
+                        "max": 6
+                    },
+                    {
+                        "name": "roomType",
+                        "label": "Room Type",
+                        "type": "select",
+                        "required": true,
+                        "options": [
+                            { "value": "suite", "label": "Royal Tirumala Suite - ₹4,500/night" },
+                            { "value": "deluxe", "label": "Deluxe Garden View - ₹3,200/night" },
+                            { "value": "family", "label": "Family Grand Suite - ₹5,500/night" }
+                        ]
+                    },
+                    {
+                        "name": "message",
+                        "label": "Special Requests (Optional)",
+                        "type": "textarea",
+                        "placeholder": "Any special requests or preferences?"
+                    }
+                ]
+            }
+        },
+
+        "amenities": {
+            "hero": {
+                "tagline": "Comfort Features",
+                "title": "Premium Amenities",
+                "description": "Discover all the amenities and facilities we offer to make your stay comfortable and memorable"
+            },
+            
+            "sections": [
+                {
+                    "id": "room-amenities",
+                    "title": "Room Amenities",
+                    "icon": "Home",
+                    "items": [
+                        "High-Speed WiFi",
+                        "Air Conditioning",
+                        "Mountain/Garden View",
+                        "Modern Furnishings",
+                        "Equipped Kitchen",
+                        "Attached Bathrooms",
+                        "Hot Water 24/7",
+                        "TV with Cable"
+                    ]
+                },
+                {
+                    "id": "services",
+                    "title": "Services",
+                    "icon": "Bell",
+                    "items": [
+                        "24-Hour Check-in/Check-out",
+                        "Daily Housekeeping",
+                        "Room Service",
+                        "Laundry Service",
+                        "Luggage Storage",
+                        "Travel Assistance"
+                    ]
+                },
+                {
+                    "id": "facilities",
+                    "title": "Facilities",
+                    "icon": "Sparkles",
+                    "items": [
+                        "Free Parking",
+                        "Common Seating Area",
+                        "Well-Maintained Premises",
+                        "CCTV Security",
+                        "First Aid",
+                        "Emergency Contact Support"
+                    ]
+                }
+            ]
+        },
+
+        "contact": {
+            "hero": {
+                "tagline": "Get in Touch",
+                "title": "Contact Sri Hari Home Stay",
+                "description": "Have questions? We'd love to hear from you. Contact us today for more information or to book your stay."
+            },
+            
+            "contactInfo": [
+                {
+                    "icon": "Phone",
+                    "label": "Phone",
+                    "value": "+91 7207357312",
+                    "link": "tel:+917207357312"
+                },
+                {
+                    "icon": "Mail",
+                    "label": "Email",
+                    "value": "contact@sriharihomestay.com",
+                    "link": "mailto:contact@sriharihomestay.com"
+                },
+                {
+                    "icon": "MapPin",
+                    "label": "Address",
+                    "value": "22-4-52/104, Mangalam, Tirupati, AP 517507"
+                },
+                {
+                    "icon": "MessageCircle",
+                    "label": "WhatsApp",
+                    "value": "Chat on WhatsApp",
+                    "link": "https://wa.me/917207357312"
+                }
+            ],
+            
+            "form": {
+                "title": "Send us a Message",
+                "fields": [
+                    {
+                        "name": "name",
+                        "label": "Your Name",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "name": "email",
+                        "label": "Your Email",
+                        "type": "email",
+                        "required": true
+                    },
+                    {
+                        "name": "phone",
+                        "label": "Phone Number",
+                        "type": "tel"
+                    },
+                    {
+                        "name": "subject",
+                        "label": "Subject",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "name": "message",
+                        "label": "Message",
+                        "type": "textarea",
+                        "required": true
+                    }
+                ]
+            },
+            
+            "faq": [
+                {
+                    "question": "What is the check-in and check-out time?",
+                    "answer": "We offer 24-hour check-in and check-out for your convenience."
+                },
+                {
+                    "question": "Is parking available?",
+                    "answer": "Yes, free parking is available for all our guests."
+                },
+                {
+                    "question": "Do you offer WiFi?",
+                    "answer": "Yes, high-speed WiFi is provided in all rooms complimentary."
+                },
+                {
+                    "question": "Is the property family-friendly?",
+                    "answer": "Absolutely! We are a family-friendly property with excellent facilities for families and groups."
+                },
+                {
+                    "question": "What is the cancellation policy?",
+                    "answer": "Please contact us directly for cancellation and refund policies."
+                },
+                {
+                    "question": "How close are you to the temple?",
+                    "answer": "We are located at a prime location, just a short distance from Lord Venkateswara Temple in Tirupati."
+                }
+            ]
+        },
+
+        "common": {
+            "navigation": {
+                "logo": {
+                    "text": "S",
+                    "name": "Sri Hari Home Stay"
+                },
+                "links": [
+                    { "label": "Home", "path": "/" },
+                    { "label": "Rooms", "path": "/rooms" },
+                    { "label": "Amenities", "path": "/amenities" },
+                    { "label": "Gallery", "path": "/gallery" },
+                    { "label": "Contact", "path": "/contact" }
+                ],
+                "auth": {
+                    "signIn": { "label": "Sign In", "path": "/login" }
+                },
+                "cta": {
+                    "text": "Book Now",
+                    "path": "/booking"
+                }
+            },
+            
+            "footer": {
+                "about": {
+                    "title": "Sri Hari Home Stay",
+                    "description": "Your perfect home away from home in Tirupati. We offer premium 2BHK apartments with excellent service for families and pilgrims."
+                },
+                "quickLinks": [
+                    { "label": "Home", "path": "/" },
+                    { "label": "Rooms", "path": "/rooms" },
+                    { "label": "Gallery", "path": "/gallery" },
+                    { "label": "Contact", "path": "/contact" }
+                ],
+                "contact": {
+                    "phone": "+91 7207357312",
+                    "email": "contact@sriharihomestay.com",
+                    "address": "22-4-52/104, Mangalam, Tirupati, AP 517507"
+                },
+                "social": [
+                    { "name": "Facebook", "url": "#" },
+                    { "name": "Instagram", "url": "#" },
+                    { "name": "WhatsApp", "url": "https://wa.me/917207357312" }
+                ],
+                "legal": [
+                    { "label": "Privacy Policy", "path": "/privacy" },
+                    { "label": "Terms & Conditions", "path": "/terms" }
+                ]
+            }
+        }
+    },
+
+    "rooms": {
+        "type": "2BHK Apartment",
+        "count": 18,
+        "pricePerNight": 4000,
+        "checkInHours": "24h",
+        "checkOutHours": "24h",
+        "rating": {
+            "score": 4.9,
+            "count": 256
+        },
+        "description": "Experience premium living in our fully-furnished 2-bedroom, 1-hall, 1-balcony apartment. Perfect for families and groups seeking comfort and convenience near Lord Venkateswara Temple in Tirupati.",
+        "longDescription": "Ideal for families, pilgrims, and groups visiting Tirupati. Our 2BHK apartments are thoughtfully designed to provide maximum comfort with all modern conveniences. Whether you're here for a spiritual journey or leisure, our property ensures a memorable stay.",
+        "features": [
+            "2 Spacious Bedrooms",
+            "Living Area with Balcony",
+            "Mountain View",
+            "Modern Furnishings",
+            "Equipped Kitchen",
+            "Attached Bathrooms"
+        ],
+        "amenities": [
+            "High-Speed WiFi",
+            "Air Conditioning",
+            "Balcony with Mountain View",
+            "Free Parking",
+            "24-Hour Check-in/Check-out",
+            "Daily Housekeeping"
+        ],
+        "checkInDetails": {
+            "checkIn": "24h",
+            "checkOut": "24h",
+            "parking": "Free",
+            "wifi": "High-Speed"
+        }
+    },
+
+    "amenities_highlights": [
+        {
+            "id": "clean-rooms",
+            "name": "Clean and Spacious Rooms",
+            "description": "Well-maintained, hygienic rooms with ample space for families",
+            "category": "room",
+            "icon": "CheckCircle2"
+        },
+        {
+            "id": "room-service",
+            "name": "Excellent Room Service",
+            "description": "Prompt and courteous room service available 24/7",
+            "category": "room",
+            "icon": "Bell"
+        },
+        {
+            "id": "family-friendly",
+            "name": "Secure & Family-Friendly",
+            "description": "Safe environment perfect for families and pilgrims",
+            "category": "special",
+            "icon": "Shield"
+        }
+    ],
+
+    "average_review_summary": [
+        "Room facilities are good",
+        "Room cleaning is excellent",
+        "Staff service is very good",
+        "Safe and secure stay for families"
+    ]
+}

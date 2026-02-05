@@ -1,0 +1,205 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://sri-hari-home-stay.netlify.app/#website",
+      "url": "https://sri-hari-home-stay.netlify.app",
+      "name": "Sri Hari Home Stay",
+      "description": "Premium 2BHK family homestay in Tirupati",
+      "publisher": {
+        "@id": "https://sri-hari-home-stay.netlify.app/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sri-hari-home-stay.netlify.app/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://sri-hari-home-stay.netlify.app/#organization",
+      "name": "Sri Hari Home Stay",
+      "url": "https://sri-hari-home-stay.netlify.app",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sri-hari-home-stay.netlify.app/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7207357312",
+        "contactType": "reservations",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Telugu", "Hindi"]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "LodgingBusiness",
+      "@id": "https://sri-hari-home-stay.netlify.app/#lodgingbusiness",
+      "name": "Sri Hari Home Stay",
+      "description": "Family-friendly home stay in Tirupati with clean and spacious 2BHK apartments. Premium accommodation near Lord Venkateswara Temple with modern amenities, mountain views, and 24/7 check-in facility.",
+      "url": "https://sri-hari-home-stay.netlify.app",
+      "telephone": "+91-7207357312",
+      "email": "contact@sriharihomestay.com",
+      "image": [
+        "https://cdn.jsdelivr.net/gh/RevanthkumarYallanuru/shrassets@main/Homepage/banner.jpeg",
+        "https://cdn.jsdelivr.net/gh/RevanthkumarYallanuru/shrassets@main/Roomspage/Bedroom/br1.jpeg",
+        "https://cdn.jsdelivr.net/gh/RevanthkumarYallanuru/shrassets@main/Roomspage/Hall/hall1.jpeg"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "22-4-52/104, Bank Employees Colony, Sri Venkateshwara Colony, Mangalam",
+        "addressLocality": "Tirupati",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "517507",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.6488135,
+        "longitude": 79.4412307
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Sri+Hari+Home+Stay+Tirupati",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "42",
+        "reviewCount": "42"
+      },
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, UPI, Card",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "checkinTime": "00:00",
+      "checkoutTime": "23:59",
+      "numberOfRooms": 18,
+      "petsAllowed": false,
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Balcony", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Mountain View", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Daily Housekeeping", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "24-Hour Check-in", "value": true}
+      ],
+      "containsPlace": {
+        "@type": "Accommodation",
+        "name": "2BHK Apartment",
+        "description": "Fully-furnished 2-bedroom apartment with living hall, balcony, kitchen, and attached bathrooms",
+        "occupancy": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 6
+        },
+        "numberOfBedrooms": 2,
+        "numberOfBathroomsTotal": 2,
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 1000,
+          "unitCode": "FTK"
+        },
+        "amenityFeature": [
+          {"@type": "LocationFeatureSpecification", "name": "Air Conditioning"},
+          {"@type": "LocationFeatureSpecification", "name": "WiFi"},
+          {"@type": "LocationFeatureSpecification", "name": "Kitchen"},
+          {"@type": "LocationFeatureSpecification", "name": "Balcony"}
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://sri-hari-home-stay.netlify.app/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sri-hari-home-stay.netlify.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rooms",
+          "item": "https://sri-hari-home-stay.netlify.app/rooms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gallery",
+          "item": "https://sri-hari-home-stay.netlify.app/gallery"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "https://sri-hari-home-stay.netlify.app/contact"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://sri-hari-home-stay.netlify.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the check-in and check-out time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer 24-hour check-in and check-out for your convenience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is parking available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, free parking is available for all our guests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer WiFi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, high-speed WiFi is provided in all rooms complimentary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the property family-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! We are a family-friendly property with excellent facilities for families and groups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How close are you to the temple?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are located at a prime location, just 5 km from Alipiri (Lord Venkateswara Temple foothill) in Tirupati."
+          }
+        }
+      ]
+    }
+  ]
+}

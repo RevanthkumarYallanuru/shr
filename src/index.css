@@ -1,0 +1,403 @@
+/* Font import handled in index.html for better performance with preload */
+/* Fallback: @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sri Hari Home Stay Design System
+   Premium hotel aesthetic: Brand Red & Cream
+   Colors in HSL format */
+
+@layer base {
+  :root {
+    /* Core Backgrounds - Cream/Beige #F1E9D4 */
+    --background: 43 51% 89%;
+    --foreground: 0 65% 25%; /* Darker version of brand red for text */
+    
+    /* Card & Surfaces - Slightly lighter cream or white */
+    --card: 43 51% 94%;
+    --card-foreground: 0 65% 25%;
+    
+    --popover: 43 51% 94%;
+    --popover-foreground: 0 65% 25%;
+    
+    /* Primary: Brand Red #D32F2F */
+    --primary: 0 65% 51%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary: Muted Brown/Beige */
+    --secondary: 43 30% 85%;
+    --secondary-foreground: 0 65% 45%;
+    
+    /* Muted: Soft Gray/Brown */
+    --muted: 43 20% 80%;
+    --muted-foreground: 0 30% 40%;
+    
+    /* Accent: Brand Blue #1E88E5 for professional touches */
+    --accent: 207 76% 51%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* UI Elements */
+    --border: 0 30% 80%;
+    --input: 0 30% 80%;
+    --ring: 0 65% 51%;
+    
+    --radius: 0.75rem;
+    
+    /* Sidebar - Brand Red Theme */
+    --sidebar-background: 0 65% 40%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 207 76% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 55% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 50% 35%;
+    --sidebar-ring: 207 76% 51%;
+    
+    /* Custom Tokens */
+    --cream: 43 51% 89%;
+    --cream-dark: 43 40% 80%;
+    --brand-red: 0 65% 51%;
+    --brand-red-light: 0 60% 60%;
+    --brand-red-dark: 0 70% 40%;
+    --brand-blue: 207 76% 51%;
+    --brand-blue-light: 207 70% 65%;
+    --brand-blue-dark: 207 80% 40%;
+    --charcoal: 0 20% 20%;
+    --success: 142 72% 35%;
+    --warning: 38 92% 50%;
+    --info: 207 76% 51%;
+    
+    /* Gradients - Enhanced hero with elegant dark overlay */
+    --gradient-hero: linear-gradient(
+      180deg, 
+      hsl(0 0% 0% / 0.3) 0%, 
+      hsl(0 0% 0% / 0.1) 30%,
+      hsl(0 0% 0% / 0.2) 60%,
+      hsl(0 0% 0% / 0.5) 100%
+    );
+    --gradient-blue: linear-gradient(135deg, hsl(207 76% 51%), hsl(207 80% 40%));
+    --gradient-cream: linear-gradient(180deg, hsl(43 51% 89%), hsl(43 30% 95%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 65% 20% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(0 65% 20% / 0.12);
+    --shadow-heavy: 0 20px 50px -12px hsl(0 65% 20% / 0.2);
+    --shadow-card: 0 2px 12px -2px hsl(0 65% 20% / 0.06);
+    --shadow-card-hover: 0 12px 40px -8px hsl(0 65% 20% / 0.15);
+    
+    /* Typography */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 0 50% 10%;
+    --foreground: 43 51% 90%;
+    
+    --card: 0 40% 15%;
+    --card-foreground: 43 51% 90%;
+    
+    --popover: 0 40% 15%;
+    --popover-foreground: 43 51% 90%;
+    
+    --primary: 207 76% 51%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 30% 20%;
+    --secondary-foreground: 43 51% 90%;
+    
+    --muted: 0 25% 25%;
+    --muted-foreground: 43 20% 60%;
+    
+    --accent: 207 76% 51%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 30% 25%;
+    --input: 0 30% 25%;
+    --ring: 207 76% 51%;
+    
+    --sidebar-background: 0 50% 10%;
+    --sidebar-foreground: 43 51% 90%;
+    --sidebar-primary: 207 76% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 30% 20%;
+    --sidebar-accent-foreground: 43 51% 90%;
+    --sidebar-border: 0 30% 25%;
+    --sidebar-ring: 207 76% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-1px);
+  }
+  
+  .btn-gold,
+  .btn-blue {
+    background: var(--gradient-blue);
+    @apply text-white font-medium transition-all duration-300;
+    box-shadow: 0 4px 14px -3px hsl(207 76% 51% / 0.4);
+  }
+  
+  .btn-gold:hover,
+  .btn-blue:hover {
+    box-shadow: 0 6px 20px -3px hsl(207 76% 51% / 0.5);
+    transform: translateY(-2px);
+  }
+  
+  /* Card Styles */
+  .card-premium {
+    @apply bg-card rounded-xl border border-border;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-premium:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+  
+  /* Dashboard Sidebar */
+  .sidebar-nav-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sidebar-foreground/70 transition-all duration-200;
+  }
+  
+  .sidebar-nav-item:hover {
+    @apply bg-sidebar-accent text-sidebar-foreground;
+  }
+  
+  .sidebar-nav-item.active {
+    @apply bg-sidebar-primary text-sidebar-primary-foreground font-medium;
+  }
+  
+  /* Status Badges */
+  .badge-confirmed {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+  
+  .badge-pending {
+    @apply bg-warning/10 text-warning border border-warning/20;
+  }
+  
+  .badge-cancelled {
+    @apply bg-destructive/10 text-destructive border border-destructive/20;
+  }
+  
+  /* Hero Section */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Section Containers */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Input Styles */
+  .input-premium {
+    @apply bg-background border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200;
+  }
+  
+  /* Table Styles */
+  .table-premium {
+    @apply w-full;
+  }
+  
+  .table-premium th {
+    @apply text-left text-xs font-medium text-muted-foreground uppercase tracking-wider py-3 px-4 bg-muted/50;
+  }
+  
+  .table-premium td {
+    @apply py-4 px-4 border-b border-border;
+  }
+  
+  .table-premium tr:hover td {
+    @apply bg-muted/30;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  /* ==========================================================================
+   * NUMERICAL VALUE STYLING SYSTEM
+   * Unified, formal number styling across the entire site
+   * All numbers use consistent font, weight, and formatting
+   * ========================================================================== */
+  
+  /* Base Number Style - Applied to all numerical elements */
+  .num,
+  .price-primary,
+  .price-accent,
+  .rating-score,
+  .stat-number,
+  .count-badge,
+  .metric-small {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Large Price Display - Primary pricing (e.g., ₹4,000/night) */
+  .price-primary {
+    @apply font-bold text-foreground;
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  /* Price with accent - For emphasized pricing */
+  .price-accent {
+    @apply font-bold text-accent;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  /* Rating Score Display - Star ratings (e.g., 5.0, 4.9) */
+  .rating-score {
+    @apply font-bold;
+    color: hsl(var(--accent));
+    line-height: 1;
+  }
+  
+  /* Stat Number - Large statistics (e.g., 42 reviews, 18 apartments) */
+  .stat-number {
+    @apply font-semibold text-foreground;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  
+  /* Count Badge - Small counts (e.g., "(42 reviews)") */
+  .count-badge {
+    @apply text-muted-foreground font-medium;
+    font-size: 0.875rem;
+  }
+  
+  /* Small metric - Secondary numbers */
+  .metric-small {
+    @apply font-medium text-foreground;
+    font-size: 1rem;
+  }
+  
+  /* Currency Symbol Styling */
+  .currency {
+    @apply font-semibold;
+    font-size: 0.9em;
+    vertical-align: baseline;
+    margin-right: 0.05em;
+  }
+  
+  /* Per-unit suffix (e.g., "/night") */
+  .price-suffix {
+    @apply text-muted-foreground font-normal;
+    font-size: 0.6em;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Uniform number styling utility class */
+  .uniform-num {
+    font-family: 'Inter', system-ui, sans-serif !important;
+    font-variant-numeric: tabular-nums lining-nums !important;
+    font-feature-settings: "tnum" 1, "lnum" 1 !important;
+    letter-spacing: -0.02em !important;
+  }
+  
+  /* Improved focus states for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background;
+  }
+  
+  /* Safe area padding for mobile devices */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0);
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

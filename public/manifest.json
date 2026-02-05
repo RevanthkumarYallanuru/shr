@@ -1,0 +1,37 @@
+{
+  "name": "Sri Hari Home Stay",
+  "short_name": "Sri Hari",
+  "description": "Premium 2BHK family homestay in Tirupati near Lord Venkateswara Temple. Clean rooms, excellent service, and 24/7 check-in.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F1E9D4",
+  "theme_color": "#D32F2F",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["travel", "lodging", "accommodation"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/RevanthkumarYallanuru/shrassets@main/Homepage/banner.jpeg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg",
+      "label": "Sri Hari Home Stay - Premium 2BHK Homestay"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
