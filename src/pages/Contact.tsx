@@ -99,7 +99,7 @@ export default function ContactPage() {
               <div className="space-y-8">
                 {/* Address Card */}
                 <motion.div variants={fadeInUp} className="card-premium p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-accent" />
                     </div>
@@ -126,7 +126,7 @@ export default function ContactPage() {
 
                 {/* Phone Card */}
                 <motion.div variants={fadeInUp} className="card-premium p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
 
                 {/* WhatsApp Card */}
                 <motion.div variants={fadeInUp} className="card-premium p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
 
                 {/* Email Card */}
                 <motion.div variants={fadeInUp} className="card-premium p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
 
                 {/* Hours Card */}
                 <motion.div variants={fadeInUp} className="card-premium p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                       <Clock className="w-6 h-6 text-accent" />
                     </div>

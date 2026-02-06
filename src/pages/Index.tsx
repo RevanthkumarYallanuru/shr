@@ -204,15 +204,15 @@ function AboutSection() {
                   key={index}
                   src={img}
                   alt={`About ${index + 1}`}
-                  className={`rounded-2xl shadow-heavy w-full h-64 object-cover ${index === 1 ? 'mt-8' : ''}`}
+                  className={`rounded-2xl shadow-heavy w-full h-48 sm:h-64 object-cover ${index === 1 ? 'mt-8' : ''}`}
                 />
               ))}
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-heavy max-w-xs">
-              <p className="font-serif text-lg text-foreground italic">
+            <div className="relative sm:absolute sm:-bottom-6 sm:-left-6 bg-card p-4 sm:p-6 rounded-xl shadow-heavy max-w-xs mt-4 sm:mt-0 mx-auto sm:mx-0">
+              <p className="font-serif text-base sm:text-lg text-foreground italic text-center sm:text-left">
                 "{about.testimonial}"
               </p>
-              <p className="text-sm text-muted-foreground mt-2">Guest Review Highlight</p>
+              <p className="text-sm text-muted-foreground mt-2 text-center sm:text-left">Guest Review Highlight</p>
             </div>
           </motion.div>
         </motion.div>

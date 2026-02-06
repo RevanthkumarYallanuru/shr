@@ -277,10 +277,10 @@ export default function GalleryPage() {
               <X className="w-6 h-6 text-white" />
             </button>
 
-            {/* Navigation */}
+            {/* Navigation - Desktop */}
             <button
               onClick={(e) => { e.stopPropagation(); navigateImage('prev'); }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6 text-white" />
@@ -288,7 +288,7 @@ export default function GalleryPage() {
 
             <button
               onClick={(e) => { e.stopPropagation(); navigateImage('next'); }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6 text-white" />
@@ -319,6 +319,26 @@ export default function GalleryPage() {
               {/* Counter */}
               <div className="absolute top-4 left-4 px-4 py-2 bg-black/50 rounded-full text-white text-sm">
                 {currentImageIndex + 1} / {filteredImages.length}
+              </div>
+
+              {/* Mobile Navigation */}
+              <div className="md:hidden flex justify-center gap-4 mt-4">
+                <button
+                  onClick={(e) => { e.stopPropagation(); navigateImage('prev'); }}
+                  className="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors flex items-center gap-1"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                  <span className="text-sm">Prev</span>
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); navigateImage('next'); }}
+                  className="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors flex items-center gap-1"
+                  aria-label="Next image"
+                >
+                  <span className="text-sm">Next</span>
+                  <ChevronRight className="w-5 h-5" />
+                </button>
               </div>
             </motion.div>
           </motion.div>

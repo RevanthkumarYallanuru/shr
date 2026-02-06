@@ -332,9 +332,9 @@ export const PAGES = {
       tagline: "The Art of Stay",
       title: "Explore Comfort at Our Stays",
       rooms: [
-        { id: "room-1", name: "Royal Tirumala Suite", type: "Bed Room", image: CDN_IMAGES.roomspage.bedroom[0] },
-        { id: "room-2", name: "Deluxe Garden View", type: "Living Room", image: CDN_IMAGES.roomspage.hall[0] },
-        { id: "room-3", name: "Family Grand Suite", type: "Kitchen", image: CDN_IMAGES.roomspage.kitchen[0] }
+        { id: "room-1", name: "Master Bed Room", type: "Bed Room", image: CDN_IMAGES.roomspage.bedroom[0] },
+        { id: "room-2", name: "Luxury Furniture", type: "Living Room", image: CDN_IMAGES.roomspage.hall[0] },
+        { id: "room-3", name: "Equiped Kitchen", type: "Kitchen", image: CDN_IMAGES.roomspage.kitchen[0] }
       ],
       cta: [
         { text: "View All Rooms", link: "/rooms", style: "secondary", icon: "ChevronRight" },
@@ -561,7 +561,7 @@ export const PAGES = {
      */
     form: {
       title: "Booking Details",
-      submitText: "Send Booking Request via WhatsApp",
+      submitText: "Send Booking Request",
       successMessage: "Your booking details have been sent to our team via WhatsApp. We will confirm your reservation shortly.",
       note: "Your booking request will be sent to our team via WhatsApp for confirmation."
     }
