@@ -183,12 +183,16 @@ export const SITE_CONFIG = {
   },
 
   /**
-   * Theme colors (HSL values defined in CSS)
+   * Theme colors - Regal Heritage Luxury (HSL values defined in CSS)
    */
   theme: {
-    primaryColor: "#D32F2F",
-    accentColor: "#1E88E5",
-    backgroundColor: "#F1E9D4"
+    primaryColor: "#982B1C",      /* Heritage Red */
+    accentColor: "#FFB200",       /* Premium Gold (micro-use) */
+    backgroundColor: "#F2E8C6",   /* Luxury Canvas */
+    secondaryBg: "#DAD4B5",       /* Secondary Background */
+    deepRed: "#800000",           /* Deep Accent Red */
+    coolAccent: "#7EACB5",        /* Cool Supporting Accent */
+    textColor: "#2A2A2A"          /* Primary Text */
   }
 };
 
@@ -661,10 +665,10 @@ export const COMPONENTS = {
       name: SITE_CONFIG.name
     },
     navLinks: [
-      { href: "/", label: "Home" },
-      { href: "/rooms", label: "Rooms" },
-      { href: "/gallery", label: "Gallery" },
-      { href: "/contact", label: "Contact" }
+      { href: "/", label: "Home", icon: "Home" },
+      { href: "/rooms", label: "Rooms", icon: "Bed" },
+      { href: "/gallery", label: "Gallery", icon: "Camera" },
+      { href: "/contact", label: "Contact", icon: "Phone" }
     ],
     cta: {
       text: "Book Now",

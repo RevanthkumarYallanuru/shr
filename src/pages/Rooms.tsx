@@ -13,6 +13,7 @@ import {
   Bed, Sofa, Bath, ChefHat, MessageCircle, Check, ImageOff, ZoomIn
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { BookingFormModal } from '@/components/BookingFormModal';
 
 // Import centralized data
 import { PAGES, SITE_CONFIG, CDN_IMAGES } from '@/data/data';
@@ -60,8 +61,7 @@ export default function RoomsPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImageIndex, setLightboxImageIndex] = useState(0);
   const [imageLoadingStates, setImageLoadingStates] = useState<Record<number, boolean>>({});
-  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
-  
+  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});  const [bookingModalOpen, setBookingModalOpen] = useState(false);  
   // Browse by Area state
   const [browseCategory, setBrowseCategory] = useState('all');
   const [browseImageIndex, setBrowseImageIndex] = useState<number | null>(null);
@@ -131,32 +131,9 @@ export default function RoomsPage() {
     setImageErrors(prev => ({ ...prev, [id]: true }));
   };
 
-  // Handle WhatsApp booking
+  // Handle booking modal
   const handleBookNow = () => {
-    const message = `
-🏨 *Booking Inquiry - ${SITE_CONFIG.name}*
-
-📋 *Room Details:*
-Room Type: ${details.type}
-Price: ₹${details.pricePerNight}/night
-Check-in: ${details.checkInDetails.checkIn}
-Check-out: ${details.checkInDetails.checkOut}
-Special Features: Mountain View, Balcony
-
-✨ *Amenities:*
-${details.amenities.join(', ')}
-
-Please provide your details:
-- Guest Name
-- Number of Guests
-- Check-in Date
-- Check-out Date
-
-I would like to book this apartment. Please confirm availability and finalize the booking.
-    `.trim();
-
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://api.whatsapp.com/send?phone=${SITE_CONFIG.contact.whatsapp}&text=${encodedMessage}`, '_blank');
+    setBookingModalOpen(true);
   };
 
   const openLightbox = (index: number) => {
@@ -593,6 +570,14 @@ I would like to book this apartment. Please confirm availability and finalize th
           </div>
         </div>
       </section>
+
+      {/* Booking Form Modal */}
+      <BookingFormModal 
+        isOpen={bookingModalOpen}
+        onClose={() => setBookingModalOpen(false)}
+        roomType={details.type}
+        pricePerNight={details.pricePerNight}
+      />
     </article>
     </>
   );

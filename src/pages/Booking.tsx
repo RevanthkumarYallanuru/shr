@@ -47,7 +47,6 @@ const bookingSchema = z.object({
   guestName: z.string().min(2, 'Name must be at least 2 characters'),
   guestEmail: z.string().email('Invalid email address'),
   guestPhone: z.string().regex(/^[0-9]{10}$/, 'Please enter a valid 10-digit phone number'),
-  roomId: z.string().min(1, 'Please select a room'),
   checkIn: z.string().min(1, 'Check-in date is required'),
   checkOut: z.string().min(1, 'Check-out date is required'),
   guests: z.number().min(1, 'Number of guests is required'),
@@ -74,7 +73,6 @@ export default function BookingPage() {
       guestName: '',
       guestEmail: '',
       guestPhone: '',
-      roomId: '',
       checkIn: '',
       checkOut: '',
       guests: 1,
@@ -82,11 +80,15 @@ export default function BookingPage() {
     },
   });
 
-  const selectedRoomId = form.watch('roomId');
-  const selectedRoom = rooms.find(r => r.id === selectedRoomId);
-
   const checkInDate = form.watch('checkIn');
   const checkOutDate = form.watch('checkOut');
+
+  // Use default room configuration from ROOM_CONFIG
+  const defaultRoom = {
+    id: 'default-2bhk',
+    name: '2BHK Apartment',
+    price: 4000
+  };
 
   const calculateNights = () => {
     if (checkInDate && checkOutDate) {
@@ -104,16 +106,13 @@ export default function BookingPage() {
     setIsLoading(true);
 
     try {
-      const room = rooms.find(r => r.id === data.roomId);
-      if (!room) throw new Error('Room not found');
-
-      const totalAmount = room.price * nights;
+      const totalAmount = defaultRoom.price * nights;
 
       const bookingDetails = {
         guestName: data.guestName,
         guestPhone: data.guestPhone,
         guestEmail: data.guestEmail,
-        roomName: room.name,
+        roomName: defaultRoom.name,
         checkIn: data.checkIn,
         checkOut: data.checkOut,
         guests: data.guests,
@@ -143,7 +142,7 @@ export default function BookingPage() {
     }
   };
 
-  const totalAmount = selectedRoom ? selectedRoom.price * nights : 0;
+  const totalAmount = defaultRoom.price * nights;
 
   return (
     <>
@@ -248,32 +247,6 @@ export default function BookingPage() {
                   )}
                 />
 
-                {/* Room Selection */}
-                <FormField
-                  control={form.control}
-                  name="roomId"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-base font-medium">Select Room</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="h-11">
-                            <SelectValue placeholder="Choose a room" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {rooms.filter(r => r.status === 'available').map((room) => (
-                            <SelectItem key={room.id} value={room.id}>
-                              {room.name} — <span className="uniform-num font-semibold">₹{room.price.toLocaleString()}</span>/night
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
                 {/* Check-in */}
                 <FormField
                   control={form.control}
@@ -359,29 +332,27 @@ export default function BookingPage() {
                 />
 
                 {/* Price Summary */}
-                {selectedRoom && (
-                  <div className="bg-secondary p-6 rounded-lg space-y-3 border border-border">
-                    <div className="flex justify-between text-sm items-baseline">
-                      <span className="text-muted-foreground">
-                        <span className="currency uniform-num">₹</span><span className="metric-small uniform-num">{selectedRoom.price}</span><span className="price-suffix">/night</span>
-                      </span>
-                      <span className="price-primary text-base uniform-num"><span className="currency">₹</span>{selectedRoom.price.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between text-sm items-baseline">
-                      <span className="text-muted-foreground"><span className="stat-number uniform-num">{nights}</span> night{nights > 1 ? 's' : ''}</span>
-                      <span className="metric-small uniform-num">×{nights}</span>
-                    </div>
-                    <div className="border-t border-border pt-3 flex justify-between items-baseline">
-                      <span className="font-semibold">Total Amount</span>
-                      <span className="price-accent text-2xl uniform-num"><span className="currency">₹</span>{totalAmount.toLocaleString()}</span>
-                    </div>
+                <div className="bg-secondary p-6 rounded-lg space-y-3 border border-border">
+                  <div className="flex justify-between text-sm items-baseline">
+                    <span className="text-muted-foreground">
+                      <span className="currency uniform-num">₹</span><span className="metric-small uniform-num">{defaultRoom.price}</span><span className="price-suffix">/night</span>
+                    </span>
+                    <span className="price-primary text-base uniform-num"><span className="currency">₹</span>{defaultRoom.price.toLocaleString()}</span>
                   </div>
-                )}
+                  <div className="flex justify-between text-sm items-baseline">
+                    <span className="text-muted-foreground"><span className="stat-number uniform-num">{nights}</span> night{nights > 1 ? 's' : ''}</span>
+                    <span className="metric-small uniform-num">×{nights}</span>
+                  </div>
+                  <div className="border-t border-border pt-3 flex justify-between items-baseline">
+                    <span className="font-semibold">Total Amount</span>
+                    <span className="price-accent text-2xl uniform-num"><span className="currency">₹</span>{totalAmount.toLocaleString()}</span>
+                  </div>
+                </div>
 
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  disabled={isLoading || !selectedRoom}
+                  disabled={isLoading}
                   className="btn-gold w-full h-12 text-base"
                 >
                   {isLoading ? 'Processing...' : formData.submitText}

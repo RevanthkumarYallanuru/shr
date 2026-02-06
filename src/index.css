@@ -1,138 +1,190 @@
 /* Font import handled in index.html for better performance with preload */
-/* Fallback: @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap'); */
+/* Fallback: @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Sri Hari Home Stay Design System
-   Premium hotel aesthetic: Brand Red & Cream
-   Colors in HSL format */
+/* ============================================================================
+   SRI HARI HOME STAY - REGAL HERITAGE LUXURY DESIGN SYSTEM
+   Premium boutique aesthetic inspired by heritage temples & refined hospitality
+   Colors in HSL format
+   ============================================================================ */
 
 @layer base {
   :root {
-    /* Core Backgrounds - Cream/Beige #F1E9D4 */
-    --background: 43 51% 89%;
-    --foreground: 0 65% 25%; /* Darker version of brand red for text */
+    /* ========================================================================
+       CORE COLOR SYSTEM - Regal Heritage Luxury
+       ======================================================================== */
     
-    /* Card & Surfaces - Slightly lighter cream or white */
-    --card: 43 51% 94%;
-    --card-foreground: 0 65% 25%;
+    /* Primary Background - Luxury Canvas #F2E8C6 */
+    --background: 45 56% 86%;
+    --foreground: 0 0% 16%; /* Primary Text #2A2A2A */
     
-    --popover: 43 51% 94%;
-    --popover-foreground: 0 65% 25%;
+    /* Card & Surfaces - Secondary Background #DAD4B5 */
+    --card: 48 34% 78%;
+    --card-foreground: 0 0% 16%;
     
-    /* Primary: Brand Red #D32F2F */
-    --primary: 0 65% 51%;
-    --primary-foreground: 0 0% 100%;
+    --popover: 45 56% 90%;
+    --popover-foreground: 0 0% 16%;
     
-    /* Secondary: Muted Brown/Beige */
-    --secondary: 43 30% 85%;
-    --secondary-foreground: 0 65% 45%;
+    /* Primary: Heritage Red #982B1C */
+    --primary: 8 61% 35%;
+    --primary-foreground: 40 100% 95%; /* Warm white #FFF7E6 */
     
-    /* Muted: Soft Gray/Brown */
-    --muted: 43 20% 80%;
-    --muted-foreground: 0 30% 40%;
+    /* Secondary: Muted Luxury Canvas */
+    --secondary: 48 30% 82%;
+    --secondary-foreground: 8 61% 35%;
     
-    /* Accent: Brand Blue #1E88E5 for professional touches */
-    --accent: 207 76% 51%;
-    --accent-foreground: 0 0% 100%;
+    /* Muted: Soft Heritage Tones */
+    --muted: 45 25% 75%;
+    --muted-foreground: 0 0% 35%;
+    
+    /* Accent: Premium Gold #FFB200 (micro-use only) */
+    --accent: 42 100% 50%;
+    --accent-foreground: 0 0% 16%;
+    
+    /* Cool Supporting Accent #7EACB5 */
+    --accent-cool: 189 29% 60%;
+    --accent-cool-foreground: 0 0% 100%;
+    
+    /* Deep Accent Red #800000 (for gradients) */
+    --primary-deep: 0 100% 25%;
     
     /* Destructive */
-    --destructive: 0 72% 51%;
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
     
     /* UI Elements */
-    --border: 0 30% 80%;
-    --input: 0 30% 80%;
-    --ring: 0 65% 51%;
+    --border: 45 30% 70%;
+    --input: 45 30% 75%;
+    --ring: 8 61% 35%;
     
     --radius: 0.75rem;
     
-    /* Sidebar - Brand Red Theme */
-    --sidebar-background: 0 65% 40%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 207 76% 51%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 55% 45%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 50% 35%;
-    --sidebar-ring: 207 76% 51%;
+    /* Sidebar - Heritage Red Theme */
+    --sidebar-background: 8 61% 30%;
+    --sidebar-foreground: 40 100% 95%;
+    --sidebar-primary: 42 100% 50%;
+    --sidebar-primary-foreground: 0 0% 16%;
+    --sidebar-accent: 0 100% 20%;
+    --sidebar-accent-foreground: 40 100% 95%;
+    --sidebar-border: 0 80% 20%;
+    --sidebar-ring: 42 100% 50%;
     
-    /* Custom Tokens */
-    --cream: 43 51% 89%;
-    --cream-dark: 43 40% 80%;
-    --brand-red: 0 65% 51%;
-    --brand-red-light: 0 60% 60%;
-    --brand-red-dark: 0 70% 40%;
-    --brand-blue: 207 76% 51%;
-    --brand-blue-light: 207 70% 65%;
-    --brand-blue-dark: 207 80% 40%;
-    --charcoal: 0 20% 20%;
-    --success: 142 72% 35%;
-    --warning: 38 92% 50%;
-    --info: 207 76% 51%;
+    /* ========================================================================
+       CUSTOM TOKENS - Regal Heritage Luxury
+       ======================================================================== */
     
-    /* Gradients - Enhanced hero with elegant dark overlay */
+    /* Canvas/Cream tones */
+    --cream: 45 56% 86%;
+    --cream-dark: 48 34% 78%;
+    
+    /* Heritage Red brand colors */
+    --brand-red: 8 61% 35%;
+    --brand-red-light: 8 55% 45%;
+    --brand-red-dark: 0 100% 25%;
+    
+    /* Gold accent (micro-use only) */
+    --brand-gold: 42 100% 50%;
+    --brand-gold-light: 42 90% 60%;
+    --brand-gold-muted: 42 60% 45%;
+    
+    /* Cool supporting accent */
+    --brand-cool: 189 29% 60%;
+    --brand-cool-light: 189 35% 70%;
+    --brand-cool-dark: 189 35% 45%;
+    
+    --charcoal: 0 0% 16%;
+    --success: 142 60% 32%;
+    --warning: 42 100% 50%;
+    --info: 189 29% 60%;
+    
+    /* ========================================================================
+       GRADIENTS - Premium Luxury Depth
+       ======================================================================== */
+    
+    /* Hero gradient - elegant dark overlay */
     --gradient-hero: linear-gradient(
       180deg, 
-      hsl(0 0% 0% / 0.3) 0%, 
-      hsl(0 0% 0% / 0.1) 30%,
-      hsl(0 0% 0% / 0.2) 60%,
-      hsl(0 0% 0% / 0.5) 100%
+      hsl(0 0% 0% / 0.35) 0%, 
+      hsl(0 0% 0% / 0.15) 30%,
+      hsl(0 0% 0% / 0.25) 60%,
+      hsl(0 0% 0% / 0.55) 100%
     );
-    --gradient-blue: linear-gradient(135deg, hsl(207 76% 51%), hsl(207 80% 40%));
-    --gradient-cream: linear-gradient(180deg, hsl(43 51% 89%), hsl(43 30% 95%));
     
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(0 65% 20% / 0.08);
-    --shadow-medium: 0 8px 30px -8px hsl(0 65% 20% / 0.12);
-    --shadow-heavy: 0 20px 50px -12px hsl(0 65% 20% / 0.2);
-    --shadow-card: 0 2px 12px -2px hsl(0 65% 20% / 0.06);
-    --shadow-card-hover: 0 12px 40px -8px hsl(0 65% 20% / 0.15);
+    /* Primary CTA gradient - Heritage Red to Deep Red */
+    --gradient-primary: linear-gradient(135deg, hsl(8 61% 35%) 0%, hsl(0 100% 25%) 100%);
     
-    /* Typography */
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    /* Subtle card gradient */
+    --gradient-card: linear-gradient(180deg, hsl(48 34% 80%) 0%, hsl(48 34% 75%) 100%);
+    
+    /* Canvas gradient */
+    --gradient-cream: linear-gradient(180deg, hsl(45 56% 86%), hsl(48 34% 82%));
+    
+    /* ========================================================================
+       SHADOWS - Premium Depth & Layering
+       ======================================================================== */
+    
+    --shadow-soft: 0 4px 20px -4px hsl(0 100% 20% / 0.06);
+    --shadow-medium: 0 8px 30px -8px hsl(0 100% 20% / 0.10);
+    --shadow-heavy: 0 20px 50px -12px hsl(0 100% 20% / 0.18);
+    --shadow-card: 0 2px 12px -2px hsl(0 100% 20% / 0.05);
+    --shadow-card-hover: 0 12px 40px -8px hsl(0 100% 20% / 0.12);
+    
+    /* Premium CTA shadows */
+    --shadow-cta: 0 8px 24px hsl(0 100% 25% / 0.25);
+    --shadow-cta-hover: 0 12px 32px hsl(0 100% 25% / 0.35);
+    
+    /* Gold accent glow (micro-use) */
+    --shadow-gold: 0 0 1px hsl(42 100% 50% / 0.3);
+    
+    /* ========================================================================
+       TYPOGRAPHY
+       ======================================================================== */
+    
+    --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'Inter', system-ui, sans-serif;
   }
 
   .dark {
-    --background: 0 50% 10%;
-    --foreground: 43 51% 90%;
+    /* Dark mode - Regal Heritage Luxury */
+    --background: 0 20% 8%;
+    --foreground: 45 56% 90%;
     
-    --card: 0 40% 15%;
-    --card-foreground: 43 51% 90%;
+    --card: 0 15% 12%;
+    --card-foreground: 45 56% 90%;
     
-    --popover: 0 40% 15%;
-    --popover-foreground: 43 51% 90%;
+    --popover: 0 15% 12%;
+    --popover-foreground: 45 56% 90%;
     
-    --primary: 207 76% 51%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 8 61% 40%;
+    --primary-foreground: 40 100% 95%;
     
-    --secondary: 0 30% 20%;
-    --secondary-foreground: 43 51% 90%;
+    --secondary: 0 20% 18%;
+    --secondary-foreground: 45 56% 90%;
     
-    --muted: 0 25% 25%;
-    --muted-foreground: 43 20% 60%;
+    --muted: 0 15% 22%;
+    --muted-foreground: 45 20% 60%;
     
-    --accent: 207 76% 51%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 42 100% 50%;
+    --accent-foreground: 0 0% 10%;
     
-    --destructive: 0 62% 45%;
+    --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 0 30% 25%;
-    --input: 0 30% 25%;
-    --ring: 207 76% 51%;
+    --border: 0 20% 22%;
+    --input: 0 20% 22%;
+    --ring: 8 61% 40%;
     
-    --sidebar-background: 0 50% 10%;
-    --sidebar-foreground: 43 51% 90%;
-    --sidebar-primary: 207 76% 51%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 30% 20%;
-    --sidebar-accent-foreground: 43 51% 90%;
-    --sidebar-border: 0 30% 25%;
-    --sidebar-ring: 207 76% 51%;
+    --sidebar-background: 0 20% 8%;
+    --sidebar-foreground: 45 56% 90%;
+    --sidebar-primary: 42 100% 50%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 20% 18%;
+    --sidebar-accent-foreground: 45 56% 90%;
+    --sidebar-border: 0 20% 22%;
+    --sidebar-ring: 42 100% 50%;
   }
 }
 
@@ -157,33 +209,63 @@
 }
 
 @layer components {
-  /* Premium Button Variants */
+  /* ========================================================================
+     PREMIUM BUTTON VARIANTS - Regal Heritage Luxury
+     ======================================================================== */
+  
+  /* Primary CTA Button - Heritage Red Gradient */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300;
-    box-shadow: var(--shadow-soft);
+    background: var(--gradient-primary);
+    color: hsl(40 100% 95%);
+    border: 1px solid hsl(42 100% 50% / 0.35);
+    border-radius: 10px;
+    box-shadow: var(--shadow-cta);
+    @apply font-medium transition-all duration-300;
   }
   
   .btn-primary:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-1px);
+    filter: brightness(1.08);
+    box-shadow: var(--shadow-cta-hover);
   }
   
-  .btn-gold,
-  .btn-blue {
-    background: var(--gradient-blue);
-    @apply text-white font-medium transition-all duration-300;
-    box-shadow: 0 4px 14px -3px hsl(207 76% 51% / 0.4);
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: var(--shadow-cta-hover), 0 0 0 3px hsl(42 100% 50% / 0.2);
   }
   
-  .btn-gold:hover,
-  .btn-blue:hover {
-    box-shadow: 0 6px 20px -3px hsl(207 76% 51% / 0.5);
-    transform: translateY(-2px);
+  /* Secondary Button - Outlined Heritage Red */
+  .btn-secondary {
+    background: transparent;
+    color: hsl(var(--primary));
+    border: 1.5px solid hsl(var(--primary));
+    border-radius: 10px;
+    @apply font-medium transition-all duration-300;
   }
   
-  /* Card Styles */
+  .btn-secondary:hover {
+    background: hsl(var(--primary));
+    color: hsl(40 100% 95%);
+  }
+  
+  /* Gold Accent Button (micro-use contexts) */
+  .btn-gold {
+    background: var(--gradient-primary);
+    color: hsl(40 100% 95%);
+    border: 1px solid hsl(42 100% 50% / 0.35);
+    border-radius: 10px;
+    box-shadow: var(--shadow-cta);
+    @apply font-medium transition-all duration-300;
+  }
+  
+  .btn-gold:hover {
+    filter: brightness(1.08);
+    box-shadow: var(--shadow-cta-hover);
+  }
+  
+  /* Card Styles - Premium Layering */
   .card-premium {
-    @apply bg-card rounded-xl border border-border;
+    @apply bg-card rounded-xl;
+    border: 1px solid hsl(var(--border));
     box-shadow: var(--shadow-card);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -299,10 +381,10 @@
     line-height: 1.2;
   }
   
-  /* Rating Score Display - Star ratings (e.g., 5.0, 4.9) */
+  /* Rating Score Display - Gold accent for stars (micro-use) */
   .rating-score {
     @apply font-bold;
-    color: hsl(var(--accent));
+    color: hsl(var(--brand-gold));
     line-height: 1;
   }
   
@@ -348,9 +430,28 @@
     letter-spacing: -0.02em !important;
   }
   
-  /* Improved focus states for accessibility */
+  /* Improved focus states for accessibility - Heritage theme */
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+  }
+  
+  /* Gold accent utilities (micro-use only) */
+  .text-gold {
+    color: hsl(var(--brand-gold));
+  }
+  
+  .border-gold {
+    border-color: hsl(var(--brand-gold));
+  }
+  
+  .border-gold-subtle {
+    border-color: hsl(42 100% 50% / 0.35);
+  }
+  
+  /* Star rating gold color */
+  .star-gold {
+    color: hsl(var(--brand-gold));
+    fill: hsl(var(--brand-gold));
   }
   
   /* Safe area padding for mobile devices */

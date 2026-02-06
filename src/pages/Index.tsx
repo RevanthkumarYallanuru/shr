@@ -71,7 +71,7 @@ function HeroSection() {
   const { hero } = PAGES.home;
 
   return (
-    <section ref={ref} className="relative h-screen min-h-[700px] overflow-hidden" style={{ position: 'relative' }} aria-label="Welcome to Sri Hari Home Stay">
+    <section ref={ref} className="relative h-screen min-h-[700px] overflow-hidden" aria-label="Welcome to Sri Hari Home Stay">
       {/* Background Image with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0">
         <img
@@ -79,7 +79,8 @@ function HeroSection() {
           alt={`${SITE_CONFIG.name} - Premium 2BHK homestay in ${SITE_CONFIG.address.city}`}
           className="w-full h-full object-cover"
           loading="eager"
-          fetchPriority="high"
+          fetchpriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 hero-gradient" />
       </motion.div>

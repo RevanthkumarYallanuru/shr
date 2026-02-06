@@ -3,7 +3,7 @@
     "name": "Sri Hari Home Stay",
     "type": "Home Stay",
     "tagline": "Best 2BHK stays in Tirupati",
-    "description": "Experience comfort and hospitality at Sri Hari Home Stay in Tirupati. Discover clean, spacious rooms perfect for families and pilgrims visiting Lord Venkateswara Temple.",
+    "description": "",
     
     "rating": {
         "score": 5.0,
@@ -48,9 +48,13 @@
     },
     
     "theme": {
-        "primaryColor": "#D32F2F",
-        "accentColor": "#1E88E5",
-        "backgroundColor": "#F1E9D4"
+        "primaryColor": "#982B1C",
+        "accentColor": "#FFB200",
+        "backgroundColor": "#F2E8C6",
+        "secondaryBg": "#DAD4B5",
+        "deepRed": "#800000",
+        "coolAccent": "#7EACB5",
+        "textColor": "#2A2A2A"
     },
 
     "pages": {

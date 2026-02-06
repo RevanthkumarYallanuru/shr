@@ -8,7 +8,7 @@
 
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Home, Bed, Camera, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import logoImage from '@/assets/logo.png';
@@ -63,19 +63,29 @@ export function PublicHeader() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`text-base font-medium transition-colors hover:text-accent ${location.pathname === link.href
-                    ? 'text-accent'
-                    : 'text-white/90 hover:text-white'
+          <div className="hidden md:flex items-center gap-2">
+            {navLinks.map(link => {
+              const IconComponent = link.icon === 'Home' ? Home : 
+                                 link.icon === 'Bed' ? Bed :
+                                 link.icon === 'Camera' ? Camera :
+                                 link.icon === 'Phone' ? Phone : Home;
+              const isActive = location.pathname === link.href;
+              
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold text-lg transition-all duration-300 ${
+                    isActive
+                      ? 'bg-accent text-primary shadow-lg scale-105'
+                      : 'text-white/90 hover:text-white hover:bg-white/10 hover:scale-105'
                   }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+                >
+                  <IconComponent className={`w-5 h-5 ${isActive ? 'text-primary' : 'text-white/90'}`} />
+                  <span className="font-bold tracking-wide">{link.label}</span>
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA */}
@@ -109,20 +119,30 @@ export function PublicHeader() {
               transition={{ duration: 0.2 }}
               className="md:hidden py-4 border-t border-white/10 bg-primary"
             >
-              <div className="flex flex-col gap-4">
-                {navLinks.map(link => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-2 text-base font-medium transition-colors ${location.pathname === link.href
-                        ? 'text-accent bg-white/10'
-                        : 'text-white/80 hover:text-white hover:bg-white/5'
+              <div className="flex flex-col gap-2">
+                {navLinks.map(link => {
+                  const IconComponent = link.icon === 'Home' ? Home : 
+                                       link.icon === 'Bed' ? Bed :
+                                       link.icon === 'Camera' ? Camera :
+                                       link.icon === 'Phone' ? Phone : Home;
+                  const isActive = location.pathname === link.href;
+                  
+                  return (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-lg font-bold text-lg transition-all ${
+                        isActive
+                          ? 'text-accent bg-white/20 shadow-lg'
+                          : 'text-white/80 hover:text-white hover:bg-white/10'
                       }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                    >
+                      <IconComponent className={`w-6 h-6 ${isActive ? 'text-accent' : 'text-white/80'}`} />
+                      <span className="font-bold tracking-wide">{link.label}</span>
+                    </Link>
+                  );
+                })}
                 <div className="px-4 pt-4 border-t border-white/10 flex flex-col gap-2">
                   <Link to={cta.href} onClick={() => setMobileMenuOpen(false)}>
                     <Button className="btn-gold w-full text-white">{cta.text}</Button>
