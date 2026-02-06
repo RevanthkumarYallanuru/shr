@@ -94,7 +94,7 @@ export const SITE_CONFIG = {
   name: "Sri Hari Home Stay",
   tagline: "Best 2BHK stays in Tirupati",
   type: "Home Stay",
-  description: "Experience comfort and hospitality at Sri Hari Home Stay in Tirupati. Discover clean, spacious rooms perfect for families and pilgrims visiting Lord Venkateswara Temple.",
+  description: "",
   
   /**
    * SEO metadata - Global defaults
@@ -111,7 +111,7 @@ export const SITE_CONFIG = {
   pageSEO: {
     home: {
       title: "Sri Hari Home Stay | Premium 2BHK Family Homestay in Tirupati",
-      description: "Experience comfort at Sri Hari Home Stay - top-rated 2BHK family homestay in Tirupati. Clean rooms, 24/7 service near Lord Venkateswara Temple.",
+      description: "",
       keywords: "Tirupati homestay, 2BHK Tirupati, family accommodation, pilgrim stay, Sri Hari Home Stay"
     },
     rooms: {
@@ -270,7 +270,7 @@ export const PAGES = {
       tagline: "Best 2BHK stays in Tirupati",
       title: "Sri Hari Home Stay",
       subtitle: "Your Home Away From Home",
-      description: "Experience comfort and hospitality at our premium 2BHK home stay in Tirupati. Perfect for families and pilgrims visiting Lord Venkateswara Temple.",
+      description: "",
       image: CDN_IMAGES.homepage.hero,
       banners: CDN_IMAGES.homepage.banners,
       cta: [
@@ -284,8 +284,8 @@ export const PAGES = {
      */
     about: {
       tagline: "About Sri Hari Home Stay",
-      title: "Exceptional Home Stay in Tirupati",
-      description: "Experience comfort and hospitality at Sri Hari Home Stay in Tirupati. Discover clean, spacious rooms perfect for families and pilgrims visiting Lord Venkateswara Temple.",
+      title: "Best Budget Friendly Home Stay in Tirupati",
+      description: "Experience comfort and Luxury at Sri Hari Home Stay in Tirupati. Discover clean, spacious rooms perfect for families.",
       images: [
         CDN_IMAGES.roomspage.bedroom[0],
         CDN_IMAGES.roomspage.hall[0]
@@ -351,10 +351,10 @@ export const PAGES = {
       rating: "5.0",
       count: 42,
       items: [
-        { name: "Guest 1", role: "Verified Stay", rating: 5, comment: "Room facilities are good" },
-        { name: "Guest 2", role: "Verified Stay", rating: 5, comment: "Room cleaning is excellent" },
-        { name: "Guest 3", role: "Verified Stay", rating: 5, comment: "Staff service is very good" },
-        { name: "Guest 4", role: "Verified Stay", rating: 5, comment: "Safe and secure stay for families" }
+        { name: "Rajendra Desai", role: "Verified Stay", rating: 5, comment: "Room facilities are good" },
+        { name: "Pramod Akula", role: "Verified Stay", rating: 5, comment: "Room cleaning is excellent" },
+        { name: "Arun B", role: "Verified Stay", rating: 5, comment: "Staff service is very good" },
+        { name: "Girish P", role: "Verified Stay", rating: 5, comment: "Safe and secure stay for families" }
       ]
     },
 
