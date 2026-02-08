@@ -94,15 +94,15 @@ export const SITE_CONFIG = {
   name: "Sri Hari Home Stay",
   tagline: "Best 2BHK stays in Tirupati",
   type: "Home Stay",
-  description: "",
+  description: "Sri Hari Home Stay is a trusted homestay in Tirupati offering budget-friendly family accommodation. Conveniently located near Tirupati bus stand and railway station, we provide clean, spacious 2BHK apartments perfect for pilgrims and families visiting Lord Venkateswara Temple.",
   
   /**
    * SEO metadata - Global defaults
    */
   meta: {
     title: "Sri Hari Home Stay | Family Home Stay in Tirupati",
-    keywords: "Tirupati homestay, family accommodation Tirupati, Sri Hari Home Stay, Tirumala lodging, pilgrim stay Tirupati",
-    description: "Book your stay at Sri Hari Home Stay - a top-rated family home stay in Tirupati. Clean rooms, excellent service, and a secure environment for pilgrims and families."
+    keywords: "homestay in Tirupati, budget homestay near Tirupati, family stay in Tirupati, hotel near Tirupati bus stand, hotel near Tirupati railway station, Tirupati homestay, family accommodation Tirupati, Sri Hari Home Stay, Tirumala lodging, pilgrim stay Tirupati",
+    description: "Book your stay at Sri Hari Home Stay - a top-rated budget homestay in Tirupati near bus stand and railway station. Clean rooms, excellent service, and a secure environment for families and pilgrims."
   },
 
   /**
@@ -111,8 +111,8 @@ export const SITE_CONFIG = {
   pageSEO: {
     home: {
       title: "Sri Hari Home Stay | Premium 2BHK Family Homestay in Tirupati",
-      description: "",
-      keywords: "Tirupati homestay, 2BHK Tirupati, family accommodation, pilgrim stay, Sri Hari Home Stay"
+      description: "Looking for a budget homestay in Tirupati? Sri Hari Home Stay offers comfortable family stay near Tirupati bus stand and railway station. Book our 2BHK apartments for a memorable pilgrimage experience.",
+      keywords: "homestay in Tirupati, budget homestay near Tirupati, family stay in Tirupati, hotel near Tirupati bus stand, hotel near Tirupati railway station, Tirupati homestay, 2BHK Tirupati, family accommodation, pilgrim stay, Sri Hari Home Stay"
     },
     rooms: {
       title: "Our Rooms | 2BHK Apartments in Tirupati",
@@ -250,8 +250,8 @@ export const ROOM_CONFIG = {
   /**
    * Room descriptions
    */
-  description: "Experience premium living in our fully-furnished 2-bedroom, 1-hall, 1-balcony apartment. Perfect for families and groups seeking comfort and convenience near Lord Venkateswara Temple in Tirupati.",
-  longDescription: "Ideal for families, pilgrims, and groups visiting Tirupati. Our 2BHK apartments are thoughtfully designed to provide maximum comfort with all modern conveniences. Whether you're here for a spiritual journey or leisure, our property ensures a memorable stay."
+  description: "Experience premium living in our fully-furnished 2-bedroom, 1-hall, 1-balcony apartment. The best budget homestay near Tirupati bus stand and railway station, perfect for families and groups seeking comfort and convenience near Lord Venkateswara Temple.",
+  longDescription: "Looking for a comfortable family stay in Tirupati? Our 2BHK apartments are the ideal homestay in Tirupati for pilgrims and tourists. Conveniently located near Tirupati bus stand and railway station, we offer budget-friendly accommodation with all modern conveniences. Whether you're here for a spiritual journey or leisure, our property ensures a memorable stay."
 };
 
 // =============================================================================
@@ -285,7 +285,7 @@ export const PAGES = {
     about: {
       tagline: "About Sri Hari Home Stay",
       title: "Best Budget Friendly Home Stay in Tirupati",
-      description: "Experience comfort and Luxury at Sri Hari Home Stay in Tirupati. Discover clean, spacious rooms perfect for families.",
+      description: "Welcome to Sri Hari Home Stay - your ideal homestay in Tirupati for a comfortable family stay. Located near Tirupati bus stand and railway station, we offer budget-friendly 2BHK apartments with modern amenities for pilgrims and tourists.",
       images: [
         CDN_IMAGES.roomspage.bedroom[0],
         CDN_IMAGES.roomspage.hall[0]
@@ -308,19 +308,19 @@ export const PAGES = {
           id: "clean-rooms",
           icon: "CheckCircle2",
           name: "Clean and Spacious Rooms",
-          description: "Well-maintained, hygienic rooms with ample space for families"
+          description: "Well-maintained, hygienic rooms perfect for family stay in Tirupati with ample space and comfort"
         },
         {
           id: "room-service",
           icon: "Bell",
           name: "Excellent Room Service",
-          description: "Prompt and courteous room service available 24/7"
+          description: "Prompt and courteous room service available 24/7 - experience the best homestay in Tirupati"
         },
         {
           id: "family-friendly",
           icon: "Shield",
           name: "Secure & Family-Friendly",
-          description: "Safe environment perfect for families and pilgrims"
+          description: "Safe, budget-friendly homestay near Tirupati bus stand and railway station, perfect for pilgrims"
         }
       ]
     },
