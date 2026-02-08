@@ -140,11 +140,11 @@ export const SITE_CONFIG = {
    * Contact information
    */
   contact: {
-    phone: "+91 7207357312",
-    phoneRaw: "917207357312",
+    phone: "+91 8639058016",
+    phoneRaw: "918639058016",
     email: "contact@sriharihomestay.com",
-    whatsapp: "917207357312",
-    whatsappLink: "https://wa.me/917207357312",
+    whatsapp: "918639058016",
+    whatsappLink: "https://wa.me/918639058016",
     website: "https://sri-hari-home-stay.netlify.app"
   },
 
@@ -705,7 +705,7 @@ export const COMPONENTS = {
       { name: "Facebook", url: SITE_CONFIG.social.facebook, icon: "Facebook" },
       { name: "Instagram", url: SITE_CONFIG.social.instagram, icon: "Instagram" }
     ],
-    copyright: `© ${new Date().getFullYear()} ${SITE_CONFIG.name}. Crafted with love in ${SITE_CONFIG.address.city}.`
+    copyright: `© ${new Date().getFullYear()} ${SITE_CONFIG.name}.  ${SITE_CONFIG.address.city}.`
   },
 
   /**

@@ -125,27 +125,27 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>Book {roomName}</DialogTitle>
-          <DialogDescription>
+      <DialogContent className="w-[95vw] max-w-md max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+        <DialogHeader className="space-y-2">
+          <DialogTitle className="text-lg sm:text-xl">Book {roomName}</DialogTitle>
+          <DialogDescription className="text-sm sm:text-base">
             Fill in your details and we'll confirm your booking via WhatsApp
           </DialogDescription>
         </DialogHeader>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
             {/* Name */}
             <FormField
               control={form.control}
               name="guestName"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your full name" {...field} />
+                    <Input placeholder="Your full name" {...field} className="text-base sm:text-base h-10 sm:h-11" />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -155,12 +155,12 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
               control={form.control}
               name="guestEmail"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email Address</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">Email Address</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="your@email.com" {...field} />
+                    <Input type="email" placeholder="your@email.com" {...field} className="text-base sm:text-base h-10 sm:h-11" />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -170,21 +170,22 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
               control={form.control}
               name="guestPhone"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>WhatsApp Number (10 digits)</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">WhatsApp Number (10 digits)</FormLabel>
                   <FormControl>
                     <Input
                       type="tel"
                       placeholder="9876543210"
                       maxLength="10"
                       {...field}
+                      className="text-base sm:text-base h-10 sm:h-11"
                       onChange={(e) => {
                         const value = e.target.value.replace(/\D/g, '').slice(0, 10);
                         field.onChange(value);
                       }}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -194,12 +195,13 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
               control={form.control}
               name="checkIn"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Check-in Date</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">Check-in Date</FormLabel>
                   <FormControl>
                     <Input
                       type="date"
                       {...field}
+                      className="text-base sm:text-base h-10 sm:h-11"
                       min={new Date().toISOString().split('T')[0]}
                       onChange={(e) => {
                         field.onChange(e);
@@ -207,7 +209,7 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
                       }}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -217,12 +219,13 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
               control={form.control}
               name="checkOut"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Check-out Date</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">Check-out Date</FormLabel>
                   <FormControl>
                     <Input
                       type="date"
                       {...field}
+                      className="text-base sm:text-base h-10 sm:h-11"
                       min={checkInDate || new Date().toISOString().split('T')[0]}
                       onChange={(e) => {
                         field.onChange(e);
@@ -230,7 +233,7 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
                       }}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -240,13 +243,14 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
               control={form.control}
               name="guests"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Number of Guests</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">Number of Guests</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
                       min="1"
                       {...field}
+                      className="text-base sm:text-base h-10 sm:h-11"
                       onChange={(e) => field.onChange(parseInt(e.target.value) || 1)}
                     />
                   </FormControl>
@@ -260,25 +264,25 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
               control={form.control}
               name="specialRequests"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Special Requests (Optional)</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">Special Requests (Optional)</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Any special requests for your stay?" {...field} />
+                    <Textarea placeholder="Any special requests for your stay?" {...field} className="text-base sm:text-base min-h-[80px] sm:min-h-[100px] resize-none" />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
 
             {/* Price Summary */}
-            <div className="bg-secondary p-4 rounded-lg space-y-2">
-              <div className="flex justify-between text-sm">
+            <div className="bg-secondary p-3 sm:p-4 rounded-lg space-y-2">
+              <div className="flex justify-between text-xs sm:text-sm">
                 <span className="text-muted-foreground">₹{roomPrice}/night × {nights} nights</span>
                 <span className="font-medium">₹{totalAmount}</span>
               </div>
-              <div className="border-t border-border pt-2 flex justify-between font-semibold">
+              <div className="border-t border-border pt-2 flex justify-between font-semibold text-sm sm:text-base">
                 <span>Total Amount</span>
-                <span className="text-accent text-lg">₹{totalAmount}</span>
+                <span className="text-accent text-base sm:text-lg">₹{totalAmount}</span>
               </div>
             </div>
 
@@ -286,7 +290,7 @@ export function BookingForm({ isOpen, onClose, roomName, roomPrice, roomId }: Bo
             <Button
               type="submit"
               disabled={isLoading}
-              className="btn-gold w-full"
+              className="btn-gold w-full text-sm sm:text-base h-10 sm:h-11"
             >
               {isLoading ? 'Processing...' : 'Send Booking Request via WhatsApp'}
             </Button>

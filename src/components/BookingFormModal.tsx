@@ -132,22 +132,22 @@ Thank you!
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[550px] max-h-[90vh] overflow-y-auto">
+      <DialogContent className="w-[95vw] max-w-[550px] max-h-[90vh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-serif text-center">
+          <DialogTitle className="text-xl sm:text-2xl font-serif text-center">
             Book Your Stay
           </DialogTitle>
         </DialogHeader>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
             {/* Guest Name */}
             <FormField
               control={form.control}
               name="guestName"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="flex items-center gap-2 text-base font-medium">
+                <FormItem className="space-y-2">
+                  <FormLabel className="flex items-center gap-2 text-sm sm:text-base font-medium">
                     <User className="w-4 h-4" />
                     Guest Name
                   </FormLabel>
@@ -155,10 +155,10 @@ Thank you!
                     <Input 
                       placeholder="Enter your full name" 
                       {...field} 
-                      className="h-11"
+                      className="h-10 sm:h-11 text-base"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -168,8 +168,8 @@ Thank you!
               control={form.control}
               name="mobileNumber"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="flex items-center gap-2 text-base font-medium">
+                <FormItem className="space-y-2">
+                  <FormLabel className="flex items-center gap-2 text-sm sm:text-base font-medium">
                     <Phone className="w-4 h-4" />
                     Mobile Number
                   </FormLabel>
@@ -177,14 +177,14 @@ Thank you!
                     <Input 
                       placeholder="Enter 10-digit mobile number" 
                       {...field}
-                      className="h-11"
+                      className="h-10 sm:h-11 text-base"
                       onChange={(e) => {
                         const value = e.target.value.replace(/\D/g, '').slice(0, 10);
                         field.onChange(value);
                       }}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -194,8 +194,8 @@ Thank you!
               control={form.control}
               name="arrivingFrom"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="flex items-center gap-2 text-base font-medium">
+                <FormItem className="space-y-2">
+                  <FormLabel className="flex items-center gap-2 text-sm sm:text-base font-medium">
                     <MapPin className="w-4 h-4" />
                     Arriving From
                   </FormLabel>
@@ -203,22 +203,22 @@ Thank you!
                     <Input 
                       placeholder="e.g., Bangalore, Chennai, Delhi" 
                       {...field} 
-                      className="h-11"
+                      className="h-10 sm:h-11 text-base"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
 
             {/* Number of Guests & Days */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2 sm:gap-4">
               <FormField
                 control={form.control}
                 name="numberOfGuests"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2 text-base font-medium">
+                  <FormItem className="space-y-2">
+                    <FormLabel className="flex items-center gap-2 text-sm sm:text-base font-medium">
                       <Users className="w-4 h-4" />
                       Guests
                     </FormLabel>
@@ -229,10 +229,10 @@ Thank you!
                         max="10"
                         {...field}
                         onChange={(e) => field.onChange(parseInt(e.target.value) || 1)}
-                        className="h-11"
+                        className="h-10 sm:h-11 text-base"
                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-xs sm:text-sm" />
                   </FormItem>
                 )}
               />
@@ -241,8 +241,8 @@ Thank you!
                 control={form.control}
                 name="numberOfDays"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2 text-base font-medium">
+                  <FormItem className="space-y-2">
+                    <FormLabel className="flex items-center gap-2 text-sm sm:text-base font-medium">
                       <Calendar className="w-4 h-4" />
                       Days
                     </FormLabel>
@@ -252,32 +252,32 @@ Thank you!
                         min="1" 
                         {...field}
                         onChange={(e) => field.onChange(parseInt(e.target.value) || 1)}
-                        className="h-11"
+                        className="h-10 sm:h-11 text-base"
                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-xs sm:text-sm" />
                   </FormItem>
                 )}
               />
             </div>
 
             {/* Check-in Date & Time */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2 sm:gap-4">
               <FormField
                 control={form.control}
                 name="checkInDate"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-base font-medium">Check-in Date</FormLabel>
+                  <FormItem className="space-y-2">
+                    <FormLabel className="text-sm sm:text-base font-medium">Check-in Date</FormLabel>
                     <FormControl>
                       <Input 
                         type="date" 
                         {...field} 
-                        className="h-11"
+                        className="h-10 sm:h-11 text-base"
                         min={new Date().toISOString().split('T')[0]}
                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-xs sm:text-sm" />
                   </FormItem>
                 )}
               />
@@ -286,8 +286,8 @@ Thank you!
                 control={form.control}
                 name="checkInTime"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="flex items-center gap-2 text-base font-medium">
+                  <FormItem className="space-y-2">
+                    <FormLabel className="flex items-center gap-2 text-sm sm:text-base font-medium">
                       <Clock className="w-4 h-4" />
                       Check-in Time
                     </FormLabel>
@@ -295,10 +295,10 @@ Thank you!
                       <Input 
                         type="time" 
                         {...field} 
-                        className="h-11"
+                        className="h-10 sm:h-11 text-base"
                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-xs sm:text-sm" />
                   </FormItem>
                 )}
               />
@@ -309,31 +309,31 @@ Thank you!
               control={form.control}
               name="specialRequests"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-base font-medium">Special Requests (Optional)</FormLabel>
+                <FormItem className="space-y-2">
+                  <FormLabel className="text-sm sm:text-base font-medium">Special Requests (Optional)</FormLabel>
                   <FormControl>
                     <Textarea 
                       placeholder="Any special requirements or preferences..." 
                       {...field} 
-                      className="min-h-[80px]"
+                      className="min-h-[80px] sm:min-h-[100px] text-base resize-none"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
 
             {/* Pricing Summary */}
-            <div className="bg-secondary p-4 rounded-lg space-y-2 border border-border">
-              <div className="flex justify-between text-sm">
+            <div className="bg-secondary p-3 sm:p-4 rounded-lg space-y-2 border border-border">
+              <div className="flex justify-between text-xs sm:text-sm">
                 <span>Room rate ({numberOfDays} {numberOfDays === 1 ? 'day' : 'days'})</span>
                 <span>₹{subtotal.toLocaleString()}</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <div className="flex justify-between text-xs sm:text-sm">
                 <span>GST (18%)</span>
                 <span>₹{gstAmount.toLocaleString()}</span>
               </div>
-              <div className="border-t border-border pt-2 flex justify-between items-center font-bold text-lg">
+              <div className="border-t border-border pt-2 flex justify-between items-center font-bold text-base sm:text-lg">
                 <span>Total Amount</span>
                 <span className="text-accent">₹{totalAmount.toLocaleString()}</span>
               </div>
@@ -343,7 +343,7 @@ Thank you!
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full h-12 text-base bg-accent hover:bg-accent/90 text-primary font-bold"
+              className="w-full h-10 sm:h-12 text-sm sm:text-base bg-accent hover:bg-accent/90 text-primary font-bold"
             >
               {isSubmitting ? 'Sending...' : 'Book via WhatsApp'}
             </Button>

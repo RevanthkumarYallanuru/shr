@@ -477,61 +477,71 @@ export default function RoomsPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-2 md:p-4"
+            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-2 sm:p-4"
             onClick={() => setBrowseImageIndex(null)}
           >
             <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="relative w-full max-w-4xl"
+              className="relative w-full max-w-4xl flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={filteredBrowseAreas[browseImageIndex].src}
-                alt={filteredBrowseAreas[browseImageIndex].title}
-                className="w-full h-auto rounded-lg max-h-[80vh] object-contain"
-              />
-
               {/* Close button */}
               <button
                 onClick={() => setBrowseImageIndex(null)}
-                className="absolute top-2 right-2 md:top-4 md:right-4 p-2 bg-white/20 hover:bg-white/40 text-white rounded-full transition-all"
+                className="absolute -top-1 right-0 sm:top-0 sm:right-0 p-2 bg-white/20 hover:bg-white/40 text-white rounded-full transition-all z-20"
               >
                 <X className="w-5 h-5 md:w-6 md:h-6" />
               </button>
 
-              {/* Image Info */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 md:p-4 bg-black/60 backdrop-blur-sm rounded-lg text-white">
-                <h3 className="font-medium text-sm md:text-base">{filteredBrowseAreas[browseImageIndex].title}</h3>
-                <p className="text-xs md:text-sm text-white/70">{filteredBrowseAreas[browseImageIndex].description}</p>
-              </div>
-
-              {/* Navigation */}
-              {filteredBrowseAreas.length > 1 && (
-                <>
+              {/* Image Container with Navigation */}
+              <div className="relative w-full flex items-center justify-center">
+                {/* Navigation - Left */}
+                {filteredBrowseAreas.length > 1 && (
                   <button
                     onClick={() => setBrowseImageIndex((prev) => prev !== null ? (prev - 1 + filteredBrowseAreas.length) % filteredBrowseAreas.length : 0)}
-                    className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/20 hover:bg-white/40 text-white rounded-full transition-all"
+                    className="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all z-10"
                   >
                     <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
+                )}
+
+                {/* Image */}
+                <img
+                  src={filteredBrowseAreas[browseImageIndex].src}
+                  alt={filteredBrowseAreas[browseImageIndex].title}
+                  className="max-w-[calc(100%-4rem)] sm:max-w-[calc(100%-6rem)] max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] object-contain rounded-lg"
+                />
+
+                {/* Navigation - Right */}
+                {filteredBrowseAreas.length > 1 && (
                   <button
                     onClick={() => setBrowseImageIndex((prev) => prev !== null ? (prev + 1) % filteredBrowseAreas.length : 0)}
-                    className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/20 hover:bg-white/40 text-white rounded-full transition-all"
+                    className="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all z-10"
                   >
                     <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
-                </>
-              )}
+                )}
 
-              {/* Counter */}
-              <div className="absolute top-2 left-2 md:top-4 md:left-4 px-2 md:px-3 py-1 bg-black/60 text-white rounded-full text-xs">
-                <span className="metric-small">{browseImageIndex + 1}</span> / <span className="metric-small">{filteredBrowseAreas.length}</span>
+                {/* Counter - Top Left */}
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 px-3 py-1.5 sm:px-4 sm:py-2 bg-black/50 text-white rounded-full text-xs sm:text-sm">
+                  <span className="metric-small">{browseImageIndex + 1}</span> / <span className="metric-small">{filteredBrowseAreas.length}</span>
+                </div>
+              </div>
+
+              {/* Image Info - Below Image */}
+              <div className="w-full max-w-2xl mt-4 sm:mt-6 px-4 text-center">
+                <h3 className="font-medium text-base sm:text-lg md:text-xl text-white mb-1 sm:mb-2">
+                  {filteredBrowseAreas[browseImageIndex].title}
+                </h3>
+                <p className="text-white/70 text-sm sm:text-base">
+                  {filteredBrowseAreas[browseImageIndex].description}
+                </p>
               </div>
             </motion.div>
           </motion.div>

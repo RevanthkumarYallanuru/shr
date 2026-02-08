@@ -159,15 +159,15 @@ export default function GalleryPage() {
 
       {/* Category Filter */}
       <section className="sticky top-20 z-30 bg-background/95 backdrop-blur-md border-y border-border">
-        <div className="section-container py-4">
-          <div className="flex items-center justify-center gap-2 flex-wrap">
+        <div className="section-container py-3 sm:py-4">
+          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide pb-1 -mx-4 px-4 sm:mx-0 sm:px-0">
             {categories.map(category => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 aria-label={`Filter by ${category.label}`}
                 aria-pressed={activeCategory === category.id}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-lg sm:rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
                   activeCategory === category.id
                     ? 'bg-primary text-primary-foreground shadow-lg'
                     : 'bg-secondary text-muted-foreground hover:bg-muted hover:text-foreground'
@@ -265,80 +265,67 @@ export default function GalleryPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center"
+            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-2 sm:p-4"
             onClick={() => setSelectedImage(null)}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-50"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 sm:p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-50"
               aria-label="Close lightbox"
             >
-              <X className="w-6 h-6 text-white" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </button>
 
-            {/* Navigation - Desktop */}
-            <button
-              onClick={(e) => { e.stopPropagation(); navigateImage('prev'); }}
-              className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              aria-label="Previous image"
-            >
-              <ChevronLeft className="w-6 h-6 text-white" />
-            </button>
-
-            <button
-              onClick={(e) => { e.stopPropagation(); navigateImage('next'); }}
-              className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              aria-label="Next image"
-            >
-              <ChevronRight className="w-6 h-6 text-white" />
-            </button>
-
-            {/* Image */}
+            {/* Main Content Container */}
             <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="relative max-w-5xl max-h-[80vh] mx-4"
+              className="relative w-full max-w-5xl flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={filteredImages[currentImageIndex].src}
-                alt={filteredImages[currentImageIndex].title}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg"
-              />
-
-              {/* Caption */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg">
-                <h3 className="font-serif text-2xl text-white mb-2">
-                  {filteredImages[currentImageIndex].title}
-                </h3>
-                <p className="text-white/80">{filteredImages[currentImageIndex].description}</p>
-              </div>
-
-              {/* Counter */}
-              <div className="absolute top-4 left-4 px-4 py-2 bg-black/50 rounded-full text-white text-sm">
-                {currentImageIndex + 1} / {filteredImages.length}
-              </div>
-
-              {/* Mobile Navigation */}
-              <div className="md:hidden flex justify-center gap-4 mt-4">
+              {/* Image Container with Navigation */}
+              <div className="relative w-full flex items-center justify-center">
+                {/* Navigation - Left Arrow */}
                 <button
                   onClick={(e) => { e.stopPropagation(); navigateImage('prev'); }}
-                  className="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors flex items-center gap-1"
+                  className="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-black/50 hover:bg-black/70 rounded-full transition-colors z-10"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft className="w-5 h-5" />
-                  <span className="text-sm">Prev</span>
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </button>
+
+                {/* Image */}
+                <img
+                  src={filteredImages[currentImageIndex].src}
+                  alt={filteredImages[currentImageIndex].title}
+                  className="max-w-[calc(100%-4rem)] sm:max-w-[calc(100%-6rem)] max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] object-contain rounded-lg"
+                />
+
+                {/* Navigation - Right Arrow */}
                 <button
                   onClick={(e) => { e.stopPropagation(); navigateImage('next'); }}
-                  className="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors flex items-center gap-1"
+                  className="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-black/50 hover:bg-black/70 rounded-full transition-colors z-10"
                   aria-label="Next image"
                 >
-                  <span className="text-sm">Next</span>
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </button>
+
+                {/* Counter - Top Left of Image */}
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 px-3 py-1.5 sm:px-4 sm:py-2 bg-black/50 rounded-full text-white text-xs sm:text-sm">
+                  {currentImageIndex + 1} / {filteredImages.length}
+                </div>
+              </div>
+
+              {/* Caption - Below Image */}
+              <div className="w-full max-w-2xl mt-4 sm:mt-6 px-4 text-center">
+                <h3 className="font-serif text-lg sm:text-xl md:text-2xl text-white mb-1 sm:mb-2">
+                  {filteredImages[currentImageIndex].title}
+                </h3>
+                <p className="text-white/70 text-sm sm:text-base line-clamp-2">
+                  {filteredImages[currentImageIndex].description}
+                </p>
               </div>
             </motion.div>
           </motion.div>
