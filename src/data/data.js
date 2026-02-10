@@ -178,7 +178,7 @@ export const SITE_CONFIG = {
    */
   rating: {
     score: 5.0,
-    count: 42,
+    count: 13,
     platform: "Google Reviews"
   },
 
@@ -291,10 +291,10 @@ export const PAGES = {
         CDN_IMAGES.roomspage.hall[0]
       ],
       stats: [
-        { icon: "Star", label: "Rating", value: "5.0", subtext: "42 Reviews" },
+        { icon: "Star", label: "Rating", value: "5.0", subtext: "13 Reviews" },
         { icon: "MapPin", label: "Prime Location", value: "Mangalam", subtext: "Tirupati, Andhra Pradesh" }
       ],
-      testimonial: "Room facilities are good, Room cleaning is excellent, and Staff service is very good"
+      testimonial: "Very nice and luxurious flat with clean washrooms. Highly recommended for families!"
     },
 
     /**
@@ -349,12 +349,21 @@ export const PAGES = {
       tagline: "Guest Experience",
       title: "What Our Guests Say",
       rating: "5.0",
-      count: 42,
+      count: 13,
       items: [
-        { name: "Rajendra Desai", role: "Verified Stay", rating: 5, comment: "Room facilities are good" },
-        { name: "Pramod Akula", role: "Verified Stay", rating: 5, comment: "Room cleaning is excellent" },
-        { name: "Arun B", role: "Verified Stay", rating: 5, comment: "Staff service is very good" },
-        { name: "Girish P", role: "Verified Stay", rating: 5, comment: "Safe and secure stay for families" }
+        { name: "Rajesh Patil", role: "Verified Stay", rating: 5, comment: "Hi today I had visited Tirupati with my family and I got a very nice place where they provide a flat and it was very nice and luxurious. The flat was very luxurious and the washroom was very clean and nice." },
+        { name: "Srinivas Gokul", role: "Verified Stay", rating: 5, comment: "We stayed for 3 days in 2 BHK, nice car parking place, very clean and comfortable with reasonable price, supervisor nice person & boys are polite in behavior, finally owner is very good person, highly recommended." },
+        { name: "Srinivasu M", role: "Verified Stay", rating: 5, comment: "Brand New! Excellent Service! Most comfortable affordable stay with friends and colleagues." },
+        { name: "Prakash Sankhla", role: "Verified Stay", rating: 5, comment: "Good management, good service, staff was very good, best home stay in Tirupati. New property, washrooms were good." },
+        { name: "Varada Sivakumar", role: "Verified Stay", rating: 5, comment: "Nice home stay, good service, good management, car parking very good, clean washrooms, kitchen is very good, best home stay in Tirupati." },
+        { name: "Ramu Ithagoni", role: "Verified Stay", rating: 5, comment: "Good home stay, good service, good management, best stay for families, washrooms very good." },
+        { name: "Venkat Reddy", role: "Verified Stay", rating: 5, comment: "Very nice rooms, very good service, overall good home stay. I suggest particularly for families and I will definitely visit again when I come to Tirupati." },
+        { name: "Vishal Gowda", role: "Verified Stay", rating: 5, comment: "We stayed at Sri Hari Home Stay, it is a very good and secure place. It's a 2BHK and they have all amenities as well." },
+        { name: "NRM Stores", role: "Verified Stay", rating: 5, comment: "Excellent service and hygienic rooms, feels like another home. Particularly good for families, I recommend." },
+        { name: "A Agrawal", role: "Verified Stay", rating: 5, comment: "It's a very good home stay, we liked their service and behaviour." },
+        { name: "Rajarao Ravi", role: "Verified Stay", rating: 5, comment: "Bedrooms are nice with big living room, kitchen and dining table. Proximity to Renigunta and Tirumala Road. Overall nice experience." },
+        { name: "Valli V", role: "Verified Stay", rating: 5, comment: "Good home stay, good service, good management, best home stay." },
+        { name: "Shyam Bhansali", role: "Verified Stay", rating: 5, comment: "Best home stay in Tirupati. I visited for one day, nice place with good service and good management." }
       ]
     },
 

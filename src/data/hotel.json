@@ -7,7 +7,7 @@
     
     "rating": {
         "score": 5.0,
-        "count": 42,
+        "count": 13,
         "platform": "Google Reviews"
     },
     
@@ -89,7 +89,7 @@
                         "icon": "Star",
                         "label": "Rating",
                         "value": "5.0",
-                        "subtext": "42 Reviews"
+                        "subtext": "13 Reviews"
                     },
                     {
                         "icon": "MapPin",
@@ -169,12 +169,21 @@
                 "tagline": "Guest Experience",
                 "title": "What Our Guests Say",
                 "rating": "5.0",
-                "count": 42,
+                "count": 13,
                 "testimonials": [
-                    "Room facilities are good",
-                    "Room cleaning is excellent",
-                    "Staff service is very good",
-                    "Safe and secure stay for families"
+                    "Hi today I had visited Tirupati with my family and I got a very nice place where they provide a flat and it was very nice and luxurious.",
+                    "We stayed for 3 days in 2 BHK, nice car parking place, very clean and comfortable with reasonable price, highly recommended.",
+                    "Brand New! Excellent Service! Most comfortable affordable stay with friends and colleagues.",
+                    "Good management, good service, staff was very good, best home stay in Tirupati.",
+                    "Nice home stay, good service, good management, car parking very good, clean washrooms, kitchen is very good.",
+                    "Good home stay, good service, good management, best stay for families, washrooms very good.",
+                    "Very nice rooms, very good service, overall good home stay. I suggest particularly for families.",
+                    "We stayed at Sri Hari Home Stay, it is a very good and secure place. It's a 2BHK and they have all amenities.",
+                    "Excellent service and hygienic rooms, feels like another home. Particularly good for families, I recommend.",
+                    "It's a very good home stay, we liked their service and behaviour.",
+                    "Bedrooms are nice with big living room, kitchen and dining table. Proximity to Renigunta and Tirumala Road.",
+                    "Good home stay, good service, good management, best home stay.",
+                    "Best home stay in Tirupati. I visited for one day, nice place with good service and good management."
                 ]
             },
             
