@@ -141,11 +141,11 @@ export const SITE_CONFIG = {
    */
   contact: {
     phone: "+91 8639058016",
-    phoneRaw: "918639058016",
+    phoneRaw: "8639058016",
     email: "contact@sriharihomestay.com",
-    whatsapp: "918639058016",
+    whatsapp: "8639058016",
     whatsappLink: "https://wa.me/918639058016",
-    website: "https://sri-hari-home-stay.netlify.app"
+    website: "https://sriharihomestays.in/"
   },
 
   /**
@@ -208,8 +208,8 @@ export const ROOM_CONFIG = {
     type: "2BHK Apartment",
     totalUnits: 18,
     pricePerNight: 4000,
-    checkIn: "24h",
-    checkOut: "24h",
+    checkIn: "Noon",
+    checkOut: "Noon",
     rating: { score: 4.9, count: 256 }
   },
 
@@ -241,8 +241,8 @@ export const ROOM_CONFIG = {
    * Check-in details
    */
   checkInDetails: {
-    checkIn: "24h",
-    checkOut: "24h",
+    checkIn: "Noon",
+    checkOut: "Noon",
     parking: "Free",
     wifi: "High-Speed"
   },
@@ -463,8 +463,8 @@ export const PAGES = {
         "Daily Housekeeping"
       ],
       checkInDetails: {
-        checkIn: "24h",
-        checkOut: "24h",
+        checkIn: "Noon",
+        checkOut: "Noon",
         parking: "Free",
         wifi: "High-Speed"
       }

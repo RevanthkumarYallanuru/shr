@@ -84,7 +84,7 @@ export function BookingFormModal({
   // Watch numberOfDays to calculate total amount
   const numberOfDays = form.watch('numberOfDays') || 1;
   const subtotal = pricePerNight * numberOfDays;
-  const gstAmount = subtotal * 0.18; // 18% GST
+  const gstAmount = subtotal * 0.05; // 5% GST
   const totalAmount = subtotal + gstAmount;
 
   const onSubmit = async (data: BookingFormValues) => {
@@ -110,7 +110,7 @@ export function BookingFormModal({
 💰 *Pricing Details:*
 • Room rate: ₹${pricePerNight.toLocaleString()}/night
 • Subtotal (${data.numberOfDays} ${data.numberOfDays === 1 ? 'day' : 'days'}): ₹${subtotal.toLocaleString()}
-• GST (18%): ₹${gstAmount.toLocaleString()}
+• GST (5%): ₹${gstAmount.toLocaleString()}
 • *Total Amount: ₹${totalAmount.toLocaleString()}*
 
 ${data.specialRequests ? `💬 *Special Requests:*\n${data.specialRequests}\n\n` : ''}Please confirm availability and provide booking confirmation.
@@ -330,7 +330,7 @@ Thank you!
                 <span>₹{subtotal.toLocaleString()}</span>
               </div>
               <div className="flex justify-between text-xs sm:text-sm">
-                <span>GST (18%)</span>
+                <span>GST (5%)</span>
                 <span>₹{gstAmount.toLocaleString()}</span>
               </div>
               <div className="border-t border-border pt-2 flex justify-between items-center font-bold text-base sm:text-lg">
